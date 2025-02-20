@@ -666,10 +666,17 @@ h1{
 }
 .contact {
   width: 100vw;
-  height: 100vh;
+  
   background: linear-gradient(37deg, rgb(220, 244, 255), rgb(252, 252, 252));
   background-size: 400% 400%;
   animation: gradientAnimation 8s infinite alternate ease-in-out;
+}
+@media (max-width: 480px){
+  .contact {
+    width: 100vw;
+    height:94rem;
+  }
+  
 }
 
 @keyframes gradientAnimation {
