@@ -1,7 +1,8 @@
-
 const menuToggle = document.getElementById('menu-toggle');
 const mobileMenu = document.getElementById('mobile-menu');
 const menuLinks = mobileMenu.querySelectorAll('a');
+const logo = document.getElementById('logo-img');
+const navbar = document.getElementById('navbar');
 
 menuToggle.addEventListener('click', function(event) {
   mobileMenu.classList.toggle('hidden'); 
@@ -17,37 +18,39 @@ mobileMenu.addEventListener('click', function(event) {
   event.stopPropagation();
 });
 
-
 menuLinks.forEach(link => {
   link.addEventListener('click', function() {
     mobileMenu.classList.add('hidden'); 
   });
 });
 
-window.addEventListener('scroll', function() {
-  const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', function () {
   const links = navbar.querySelectorAll('a');
-  
+
   if (window.scrollY > 50) {
-    console.log('scrolled to whiteeee');
-    
-    navbar.classList.add('scrolled'); 
-    navbar.classList.remove('bg-transparent'); 
-  
+    navbar.classList.add('scrolled');
+    navbar.classList.remove('bg-transparent');
+    logo.src = "./assets/images/logo2.png"; // Change to logo2.png when scrolling
+    menuToggle.classList.add('text-black'); // Change toggle icon to black
+    menuToggle.classList.remove('text-white'); // Remove white text
+
     links.forEach(link => {
-      link.classList.remove('text-white'); 
-      link.classList.add('text-black'); 
+      link.classList.remove('text-white');
+      link.classList.add('text-black');
     });
   } else {
-    navbar.classList.remove('scrolled'); 
-    navbar.classList.add('bg-transparent'); 
+    navbar.classList.remove('scrolled');
+    navbar.classList.add('bg-transparent');
+    logo.src = "./assets/images/logo.png"; // Change back to logo.png when at the top
+    menuToggle.classList.remove('text-black'); // Reset toggle icon to white
+    menuToggle.classList.add('text-white'); // Keep it white at top
+
     links.forEach(link => {
-      link.classList.add('text-white'); 
-      link.classList.remove('text-gray-700'); 
+      link.classList.add('text-white');
+      link.classList.remove('text-black');
     });
   }
 });
-
 
 
 
