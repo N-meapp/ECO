@@ -20,11 +20,12 @@
 
     
     <nav id="navbar" class="bg-transparent pt-3 pb-2 font-sans fixed w-full top-0 z-50 transition-all duration-300 ease-in-out" style="font-family: 'Liberation Sans', sans-serif;">
-      <div class="container mx-auto flex items-center justify-between max-md:px-[2rem]">
+      <div class="container mx-auto flex items-center justify-between max-md:px-[2rem]"style="padding-inline:3rem;">
        
-        <div class="">
+        <a href="#main">
           <img id="logo-img" src="./assets/images/logo.png" alt="My Logo" class="w-[6rem] max-md:w-[5rem]">
-        </div>
+        </a>
+        
         
         
     
@@ -33,7 +34,7 @@
           <div class="space-x-10 text-xl">
             <a href="index.html" class="text-white hover:text-[#00adef] text-[18px] ">Home</a>
             <a href="index.html#services" class="text-white hover:text-[#00adef] text-[18px]">Services</a>
-            <a href="packages.html" class="text-white hover:text-[#00adef] text-[18px]">Packages</a>
+            <a href="packages.html" class="text-white hover:text-[#00adef] text-[18px]  active">Packages</a>
             <a href="about.html" class="text-white hover:text-[#00adef] text-[18px]">About</a>  
             <a href="contact.html" class="text-white hover:text-[#00adef] text-[18px]">Contact Us</a>
           </div>
@@ -97,256 +98,265 @@
 
 
 
-<div class="package h-auto">
-<div id="packages ">
-</div>
+<section class="mt-20 py-10">
+  <div class="container mx-auto px-28 max-lg:px-0 max-md:px-10">
+    <!-- Grid of image cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8">
 
-<div class="reveal w-full h-auto pt-20 flex flex-col md:flex-row gap-8 md:gap-16 p-6 md:px-20" >
-
-  <div class="w-full md:w-1/2 h-auto flex items-center justify-center my-auto">
-    <img src="./assets/images/kochi2.png" alt="Kochi Image" 
-         class="w-full h-auto shadow-lg transition-transform duration-300 relative hover:animate-shake">
-  </div>
-
- 
-  <div class="bg-[white] w-full md:w-1/2 h-auto flex flex-col justify-center p-6 my-auto rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-  
-  
-    <h2 class="text-2xl font-bold mb-4 text-left"> Kochi</h2>
-  
-    
-    <p class="text-gray-700 text-left text-lg mb-6 ">
-      Planning a trip to Kochi? Choose from our flexible travel packages, perfect for short getaways, family trips, or luxury holidays. Enjoy <strong>delicious food, private cab services, comfortable stays, and an exciting cruise</strong>.  
-      
-      Savor authentic Kerala cuisine, relax in cozy hotels, and travel stress-free in well-maintained cabs. Experience a serene backwater cruise and an exclusive voyage aboard the <strong style="color: #00adef;">Minar Cochin Cruise Ship</strong>, offering panoramic ocean views, fine dining, and world-class hospitality.  
-      
-      Whether exploring historical sites, relaxing on beaches, or immersing in Kochi’s culture, we ensure a seamless and memorable journey for you!
-    </p>
-  
- 
-    <div class="flex items-center gap-4 justify-start">
-      <a href="packages.html">
-        <button class="relative overflow-hidden bg-[#00adef] text-white cursor-pointer font-semibold py-4 px-6 shadow-lg transition-transform duration-300 ease-in-out hover:scale-110 group">
-          <span class="absolute inset-0 bg-[#248eb8] w-0 transition-all duration-300 ease-in-out group-hover:w-full"></span>
-          <span class="relative z-10">For Enquiry</span>
-        </button>
-      </a>
-  
-      <a href="tel:+919876543210" class="text-green-500 hover:text-green-600 text-2xl transition duration-300">
-        <i class="fas fa-phone"></i>
-      </a>
-  
-      <a href="https://wa.me/919876543210" target="_blank" class="text-green-500 hover:text-green-600 text-3xl transition duration-300">
-        <i class="fab fa-whatsapp"></i>
-      </a>
-    </div>
-    
-  </div>
-  
-  
-</div>
-
-
-
-
-
-<div class="reveal w-full h-auto mt-32 flex flex-col md:flex-row gap-8 md:gap-16 p-6 md:px-20">
-  
-
-  <div class="bg-[white] w-full md:w-1/2 h-full flex flex-col justify-center p-6 my-auto rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-   
-   
-    <h2 class="text-2xl font-bold mb-4 text-left"> Alappuzha</h2>
-  
-    
-    <p class="text-gray-700 text-lg mb-6 text-left">
-      Planning a trip to <strong>Alappuzha</strong>, the Venice of the East? Our exclusive packages offer a perfect blend of <strong>serene backwaters, lush greenery, and golden beaches</strong>, whether for a <strong>houseboat cruise, romantic escape, or family vacation</strong>.
-      <br><br>
-      Enjoy a <strong>luxury houseboat stay</strong> with freshly prepared <strong>authentic Kerala cuisine</strong>, unwind at <strong>Alappuzha Beach</strong>, explore hidden canals on a <strong>Shikara ride</strong>, and visit <strong>Kumarakom Bird Sanctuary & Pathiramanal Island</strong>.
-      <br><br>
-      Let us handle the details while you relax, explore, and create unforgettable memories in Alappuzha!
-    </p>
-  
-  
-    <div class="flex items-center gap-4 justify-start">
-      <a href="packages.html">
-        <button class="relative overflow-hidden bg-[#00adef] text-white cursor-pointer font-semibold py-4 px-6 shadow-lg transition-transform duration-300 ease-in-out hover:scale-110 group">
-          <span class="absolute inset-0 bg-[#248eb8] w-0 transition-all duration-300 ease-in-out group-hover:w-full"></span>
-          <span class="relative z-10">For Enquiry</span>
-        </button>
-      </a>
-  
-      <a href="tel:+919876543210" class="text-green-500 hover:text-green-600 text-2xl transition duration-300">
-        <i class="fas fa-phone"></i>
-      </a>
-  
-      <a href="https://wa.me/919876543210" target="_blank" class="text-green-500 hover:text-green-600 text-3xl transition duration-300">
-        <i class="fab fa-whatsapp"></i>
-      </a>
-    </div>
-    
-  </div>
-  
-
-
-  <div class="w-full md:w-1/2 h-full flex items-center justify-center my-auto">
-    <img src="./assets/images/alappuzha5.jpg" alt="Alappuzha Image" 
-         class="w-full h-auto md:h-full shadow-lg transition-transform duration-300 relative hover:animate-shake">
-  </div>
-
-</div>
-
-
-
-
-
-<div class="reveal w-full h-auto mt-32 flex flex-col md:flex-row gap-8 md:gap-16 p-6 md:px-20">
-  
-
-  <div class="w-full md:w-1/2 h-full flex items-center justify-center my-auto">
-    <img src="./assets/images/thekkadi2.jpg" alt="Thekkady Image" 
-         class="w-full h-auto md:h-full shadow-lg transition-transform duration-300 relative hover:animate-shake">
-  </div>
-
-
-  <div class="bg-[white] w-full md:w-1/2 h-full flex flex-col justify-center p-6 my-auto rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-
- 
-    <h2 class="text-2xl font-bold mb-4 text-left"> Thekkady</h2>
-  
-  
-    <p class="text-gray-700 text-lg mb-6 text-left md:text-left">
-      Explore <strong>Thekkady</strong>, a paradise for wildlife and nature lovers. Home to the <strong>Periyar Wildlife Sanctuary</strong>, it offers thrilling safaris, lush spice plantations, and serene landscapes.  
-      <br><br>
-      Our <strong>Thekkady travel packages</strong> include:  
-       <strong>Wildlife Safari</strong> – Spot exotic animals on a Periyar Lake boat ride.  
-       <strong>Spice Tour</strong> – Discover Kerala’s famous spices.  
-       <strong>Trekking & Nature Walks</strong> – Enjoy scenic trails.  
-       <strong>Authentic Kerala Cuisine</strong> – Savor traditional flavors.  
-       <strong>Elephant Ride</strong> – Add adventure to your journey.  
-      <br><br>
-      Experience Thekkady’s beauty with a seamless, well-planned getaway!
-    </p>
-  
-
-    <div class="flex items-center gap-4 justify-start">
-      <a href="packages.html">
-        <button class="relative overflow-hidden bg-[#00adef] text-white cursor-pointer font-semibold py-4 px-6 shadow-lg transition-transform duration-300 ease-in-out hover:scale-110 group">
-          <span class="absolute inset-0 bg-[#248eb8] w-0 transition-all duration-300 ease-in-out group-hover:w-full"></span>
-          <span class="relative z-10">For Enquiry</span>
-        </button>
-      </a>
-  
-      <a href="tel:+919876543210" class="text-green-500 hover:text-green-600 text-2xl transition duration-300">
-        <i class="fas fa-phone"></i>
-      </a>
-  
-      <a href="https://wa.me/919876543210" target="_blank" class="text-green-500 hover:text-green-600 text-3xl transition duration-300">
-        <i class="fab fa-whatsapp"></i>
-      </a>
-    </div>
-    
-  </div>
-  
-
-</div>
-
-
-<div class="reveal w-full h-auto mt-32 flex flex-col md:flex-row gap-8 md:gap-16 p-6 md:px-20">
-
-  <div class="bg-[white] w-full md:w-1/2 h-full flex flex-col justify-center p-6 my-auto rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-
-  
-    <h2 class="text-2xl font-bold mb-4 text-left"> Kanyakumari</h2>
-  
-   
-    <p class="text-gray-700 text-lg mb-6 text-left md:text-left">
-      Discover <strong>Kanyakumari</strong>, where the Arabian Sea, Bay of Bengal, and Indian Ocean converge. Famous for its breathtaking sunrises, sunsets, and cultural heritage, it’s a must-visit destination.  
-      <br><br>
-      Our <strong>Kanyakumari travel packages</strong> include:  
-       <strong>Sunset View</strong> – Witness stunning ocean sunsets.  
-       <strong>Vivekananda Rock Memorial</strong> – Explore this iconic spiritual landmark.  
-       <strong>Kanyakumari Temple</strong> – Visit the revered pilgrimage site.  
-       <strong>Thiruvalluvar Statue</strong> – Admire the towering tribute to the poet.  
-       <strong>Scenic Boat Ride</strong> – Sail to Vivekananda Memorial Island.  
-      <br><br>
-      Whether for spirituality, scenic beauty, or relaxation, Kanyakumari offers unforgettable memories!
-    </p>
-  
-    
-    <div class="flex items-center gap-4 justify-start">
-      <a href="packages.html">
-        <button class="relative overflow-hidden bg-[#00adef] text-white cursor-pointer font-semibold py-4 px-6 shadow-lg transition-transform duration-300 ease-in-out hover:scale-110 group">
-          <span class="absolute inset-0 bg-[#248eb8] w-0 transition-all duration-300 ease-in-out group-hover:w-full"></span>
-          <span class="relative z-10">For Enquiry</span>
-        </button>
-      </a>
-  
-      <a href="tel:+919876543210" class="text-green-500 hover:text-green-600 text-2xl transition duration-300">
-        <i class="fas fa-phone"></i>
-      </a>
-  
-      <a href="https://wa.me/919876543210" target="_blank" class="text-green-500 hover:text-green-600 text-3xl transition duration-300">
-        <i class="fab fa-whatsapp"></i>
-      </a>
-    </div>
-  
-  </div>
-  
-
-  
-  <div class="w-full md:w-1/2 h-full flex items-center justify-center my-auto">
-    <img src="./assets/images/kanyakumari2.jpg" alt="Kanyakumari Image" 
-         class="w-full h-auto md:h-full shadow-lg transition-transform duration-300 relative hover:animate-shake">
-  </div>
-
-</div>
-
-
-
-<div class="reveal mt-16 md:mt-44 px-6 md:px-32 w-full md:w-[70%] flex items-center justify-center flex-col md:items-center mx-auto text-center">
-  <p class="text-2xl font-semibold text-[#00adef]">Customized Travel Packages</p>
-  <h1 class="text-3xl md:text-6xl font-bold leading-snug text-black">
-    Design Your Ideal Vacation
-  </h1>
-  <p class="text-base md:text-xl text-gray-600 mt-4 text-left md:text-left">
-    Design your perfect trip with our customizable packages. Choose destinations, activities, accommodations, and duration that fit your style and budget. Let us help you create a journey tailored to your vision.
+      <!-- Card 1 -->
+      <div class="relative group overflow-hidden card">
+        <img src="./assets/images/kochi2.png" alt="Location 1" class="w-full h-full object-cover transition-all duration-300">
+        
+        <!-- Overlay (on hover opacity will increase) -->
+        <div class="overlay opacity-80 group-hover:opacity-100 transition-opacity duration-300"></div>
+        
+        <!-- Location Text at the Bottom -->
+        <div class="absolute bottom-4 left-4 text-white text-xl z-10">
+          Kochi
+        </div>
+        
+        <!-- Custom overlay (center content on hover or click) -->
+<div class="content opacity-0 group-hover:opacity-100 transition-all transform translate-y-12 group-hover:translate-y-0 duration-300 max-sm:w-[15rem] max-sm:mt-[2rem] flex flex-col items-center">
+  <p class="text-base sm:text-sm max-sm:text-[10px] mb-4 text-center">
+    Planning a trip to Kochi? Enjoy flexible packages, Kerala cuisine, private cabs, cozy stay and a scenic cruise on the Minar Cochin Cruise Ship. Explore historical sites, relax on beaches or dive into Kochi’s culture for an effortless journey!
   </p>
+  <a href="contact.html" class="border border-white text-white py-2 px-4 text-center hover:bg-white hover:text-gray-800 transition-colors duration-300 sm:px-3 sm:py-2 sm:text-sm">
+    Contact Us
+  </a>
+</div>
+
+      </div>
+
+      <!-- Card 2 -->
+      <div class="relative group overflow-hidden card">
+        <img src="./assets/images/alappuzha5.jpg" alt="Location 2" class="w-full h-full object-cover transition-all duration-300">
+        
+        <!-- Overlay (on hover opacity will increase) -->
+        <div class="overlay opacity-80 group-hover:opacity-100 transition-opacity duration-300"></div>
+        
+        <!-- Location Text at the Bottom -->
+        <div class="absolute bottom-4 left-4 text-white text-xl z-10">
+          Alappuzha
+        </div>
+
+<!-- Custom overlay (center content on hover or click) -->
+<div class="content opacity-0 group-hover:opacity-100 transition-all transform translate-y-12 group-hover:translate-y-0 duration-300 max-sm:w-[15rem] max-sm:mt-[2rem] flex flex-col items-center">
+  <p class="text-base sm:text-sm max-sm:text-[10px] mb-4 text-center">
+    Visit Alappuzha for serene backwaters, luxury houseboats, Kerala cuisine, Shikara rides and trips to Kumarakom Bird Sanctuary. Let us create unforgettable memories for you!
+  </p>
+  <a href="contact.html" class="border border-white text-white py-2 px-4 text-center hover:bg-white hover:text-gray-800 transition-colors duration-300 sm:px-3 sm:py-2 sm:text-sm">
+    Contact Us
+  </a>
+</div>
+
+  
+      </div>
+
+      <!-- Card 3 -->
+      <div class="relative group overflow-hidden card">
+        <img src="./assets/images/thekkadi2.jpg" alt="Location 3" class="w-full h-full object-cover transition-all duration-300">
+        
+        <!-- Overlay (on hover opacity will increase) -->
+        <div class="overlay opacity-80 group-hover:opacity-100 transition-opacity duration-300"></div>
+        
+        <!-- Location Text at the Bottom -->
+        <div class="absolute bottom-4 left-4 text-white text-xl z-10">
+          Thekkady
+        </div>
+
+      <!-- Custom overlay (center content on hover or click) -->
+<div class="content opacity-0 group-hover:opacity-100 transition-all transform translate-y-12 group-hover:translate-y-0 duration-300 max-sm:w-[15rem] max-sm:mt-[2rem] flex flex-col items-center">
+  <p class="text-base sm:text-sm max-sm:text-[10px] mt-4 mb-4 text-center">
+    Explore Thekkady and the Periyar Wildlife Sanctuary with safaris, spice tours, trekking and elephant rides. Enjoy Kerala’s authentic cuisine and a seamless getaway in this scenic destination!
+  </p>
+  <a href="contact.html" class="border border-white text-white py-2 px-4 text-center hover:bg-white hover:text-gray-800 transition-colors duration-300 sm:px-3 sm:py-2 sm:text-sm">
+    Contact Us
+  </a>
+</div>
+
+      </div>
+
+      <!-- Card 4 -->
+      <div class="relative group overflow-hidden card">
+        <img src="./assets/images/kanyakumari2.jpg" alt="Location 4" class="w-full h-full object-cover transition-all duration-300">
+        
+        <!-- Overlay (on hover opacity will increase) -->
+        <div class="overlay opacity-80 group-hover:opacity-100 transition-opacity duration-300"></div>
+        
+        <!-- Location Text at the Bottom -->
+        <div class="absolute bottom-4 left-4 text-white text-xl z-10">
+          Kanyakumari
+        </div>
+
+<!-- Custom overlay (center content on hover or click) -->
+<div class="content opacity-0 group-hover:opacity-100 transition-all transform translate-y-12 group-hover:translate-y-0 duration-300 max-sm:w-[15rem] max-sm:mt-[2rem] flex flex-col items-center">
+  <p class="text-base sm:text-sm max-sm:text-[10px] mb-4 text-center">
+    Discover Kanyakumari, where three seas meet. Famous for its sunrises, sunsets, and cultural landmarks like the Vivekananda Rock Memorial and Thiruvalluvar Statue, it’s a must-visit for spirituality, beauty, and relaxation.
+  </p>
+  <a href="contact.html" class="border border-white text-white py-2 px-4 text-center hover:bg-white hover:text-gray-800 transition-colors duration-300 sm:px-3 sm:py-2 sm:text-sm">
+    Contact Us
+  </a>
 </div>
 
 
-<div class="reveal w-[80%] h-auto bg-[#00adef] mt-20 flex flex-col sm:flex-row items-center justify-center  px-6 md:px-16 py-20 relative ml-auto">
-
-
-  <div class="relative w-full sm:w-1/2 flex items-center justify-center">
-    <img src="./assets/images/travel2.jpg" alt="Travel Image" 
-      class="w-72 h-72 sm:w-[30rem] sm:h-[40rem] object-cover rounded-full shadow-xl border-8 border-white
-             absolute sm:left-[-6rem] translate-x-[-30%] sm:translate-x-[-50%]">
+      </div>
+      
+    </div>
   </div>
+</section>
+
+<!-- Additional CSS -->
+<style>
+  /* Overlay styles */
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 1;
+  }
+
+  /* Content inside the overlay */
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 2;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* Ensuring that the overlay appears only on hover */
+  .group:hover .overlay {
+    opacity: 1;
+  }
+
+  /* Location Text */
+  .absolute {
+    position: absolute;
+  }
+  .bottom-4 {
+    bottom: 1rem;
+  }
+  .left-4 {
+    left: 1rem;
+  }
+  .z-10 {
+    z-index: 10;
+  }
+
+  /* Mobile: Toggle visibility of content on click */
+  @media screen and (max-width: 768px) {
+    .card {
+      cursor: pointer;
+    }
+      /* Content inside the overlay */
+  .content {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 2;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+  }
+    .card.open .content {
+      opacity: 1 !important;
+      transform: translate(-50%, -50%) !important;
+    }
+
+    /* Ensure the content still has the transform effect on hover for desktop */
+    .group:hover .content {
+      opacity: 1 !important;
+      transform: translate(-50%, -50%) !important;
+    }
+  }
+</style>
+
+<!-- JavaScript for Mobile Click Toggle -->
+<script>
+  // Select all cards
+  const cards = document.querySelectorAll('.card');
+  
+  cards.forEach(card => {
+    card.addEventListener('click', function() {
+      // Close all cards first
+      cards.forEach(c => c.classList.remove('open'));
+      
+      // Toggle the 'open' class for the clicked card to display content on mobile
+      this.classList.add('open');
+    });
+  });
+</script>
 
 
-  <div class="relative w-full sm:w-full bg-white shadow-xl rounded-lg p-8 md:p-12 text-black 
-              -ml-16 sm:-ml-24 mt-10 sm:mt-0 z-10">
-    <h1 class="text-3xl md:text-5xl font-bold">Explore the World</h1>
-    <p class="text-lg md:text-xl mt-4 text-left  ">
-      Welcome to our travel and tourism platform, your one-stop destination for unforgettable journeys. 
-      We provide reliable cab services, comfortable accommodation, and scenic cruise experiences. 
-      Choose from various travel packages or create a custom itinerary tailored to your adventure.
-    </p>
 
-    
-    <a href="contact.html">
-      <button class="relative cursor-pointer mt-6 overflow-hidden bg-[#00adef] text-white font-semibold py-4 px-6 
-                     shadow-lg transition-transform duration-300 ease-in-out hover:scale-110 group">
-        <span class="absolute inset-0 bg-[#248eb8] w-0 transition-all duration-300 ease-in-out group-hover:w-full"></span>
-        <span class="relative z-10">For Enquiry</span>
+
+<section class="py-16">
+  <div class=" container mt-20 mx-auto px-10 lg:px-20 xl:px-28 flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-20 w-full">
+    <!-- Left Section -->
+    <div class="w-full lg:w-[60%] space-y-6 text-center lg:text-left">
+      <!-- Rounded Button -->
+      <button class="bg-white text-[#00adef] px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-shadow duration-300">
+        Start Your Journey
       </button>
-    </a>
+
+      <h2 class="text-5xl md:text-6xl xl:text-7xl font-semibold leading-tight">
+        Build Your Ideal Travel <span class="text-[#00adef]">Package</span>
+      </h2>
+
+      <!-- Sentence -->
+      <p class="text-lg text-gray-700 leading-relaxed">
+        Explore our exclusive travel packages that offer the perfect blend of Kerala’s nature, culture, and relaxation. From wildlife safaris to serene backwaters and beautiful beaches, our carefully curated packages ensure unforgettable experiences and comfortable stays.
+      </p>
+
+      <!-- Bar with icons and button -->
+      <div class="relative mt-8 ">
+        <div class="relative bg-white p-5 xl:p-6 rounded-lg shadow-lg flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6 z-10 lg:w-[39rem]">
+
+          <!-- Navigation Button -->
+          <a href="contact.html" class="bg-[#00adef] text-white py-3 px-6 rounded-full hover:bg-blue-400 transition-all duration-300">
+            Contact Us
+          </a>
+
+          <!-- Vertical Line -->
+          <div class="hidden md:block h-10 w-0.5 bg-gray-400"></div>
+
+          <!-- Call Icon and Text -->
+          <a href="tel:+91 9691488797" class="flex items-center text-[#00adef] space-x-2 border border-[#00adef] rounded-full px-4 py-2">
+            <i class="fas fa-phone-alt text-xl"></i>
+            <span class="text-lg">Call Us</span>
+          </a>
+
+          <!-- Vertical Line -->
+          <div class="hidden md:block h-10 w-0.5 bg-gray-400"></div>
+
+          <!-- WhatsApp Icon and Text -->
+          <a href="https://wa.me/91 9691488797" class="flex items-center text-green-500 space-x-2">
+            <i class="fab fa-whatsapp text-2xl"></i>
+            <span class="text-lg">WhatsApp</span>
+          </a>
+
+          <!-- Right Corner Color -->
+          <div class="absolute top-0 right-0 w-16 md:w-32 h-full bg-[#00adef] rounded-br-lg rounded-tr-lg"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Section (Image) -->
+    <div class="w-full lg:w-[40%] flex justify-center">
+      <img src="./assets/images/travel2.jpg" alt="Kerala" class="w-[90%] md:w-[500px] h-auto md:h-[600px] rounded-lg shadow-xl">
+    </div>
   </div>
+</section>
 
-</div>
 
-</div>
+
+
+
+
 
 
 

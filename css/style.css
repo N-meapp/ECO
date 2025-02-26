@@ -6,7 +6,10 @@ html {
   scroll-behavior: smooth;
 }
 
-
+a.active {
+  color: #00adef;  /* or any color you prefer */
+  
+}
 
 @layer base {
     body {
@@ -44,13 +47,17 @@ html{
   background: url("../assets/images/travel_3.png") center/contain no-repeat;
 }
 
+#packages {
+  position: relative; /* Added to make the pseudo-element relative to this container */
+}
+
 /* Right side background */
-.services::before {
+.packages::before {
   content: "";
   position: absolute;
   width: 600px;
   height: 400px;
-  right: -400px;
+  right: -200px;
   top: -100px;
   background: url("../assets/images/travel_3.png") center/contain no-repeat;
 }
@@ -58,7 +65,7 @@ html{
 /* Responsive adjustments for smaller screens */
 @media (max-width: 1024px) { /* Tablets */
   .destinations::before,
-  .services::before {
+  .packages::before {
     width: 400px;
     height: 300px;
     left: -250px;
@@ -69,7 +76,7 @@ html{
 
 @media (max-width: 768px) { /* Mobile screens */
   .destinations::before,
-  .services::before {
+  .packages::before {
     width: 250px;
     height: 200px;
     left: -100px;
@@ -80,7 +87,7 @@ html{
 
 @media (max-width: 480px) { /* Small mobile screens */
   .destinations::before,
-  .services::before {
+  .packages::before {
     width: 150px;
     height: 120px;
     left: -50px;

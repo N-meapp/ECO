@@ -21,18 +21,20 @@
 
     
     <nav id="navbar" class="bg-transparent pt-3 pb-2 font-sans fixed w-full top-0 z-50 transition-all duration-300 ease-in-out" style="font-family: 'Liberation Sans', sans-serif;">
-      <div class="container mx-auto flex items-center justify-between max-md:px-[2rem]">
+      <div class="container mx-auto flex items-center justify-between max-md:px-[2rem]"style="padding-inline:3rem;">
        
-        <div class="">
+        <a href="#main">
           <img id="logo-img" src="./assets/images/logo.png" alt="My Logo" class="w-[6rem] max-md:w-[5rem]">
-        </div>
+        </a>
+        
         
         
     
         
         <div class="hidden lg:flex items-center space-x-24 ml-auto">
           <div class="space-x-10 text-xl">
-            <a href="index.html" class="text-white hover:text-[#00adef] text-[18px] ">Home</a>
+            <a href="index.html" class="text-white hover:text-[#00adef] text-[18px] active">Home</a>
+
             <a href="index.html#services" class="text-white hover:text-[#00adef] text-[18px]">Services</a>
             <a href="packages.html" class="text-white hover:text-[#00adef] text-[18px]">Packages</a>
             <a href="about.html" class="text-white hover:text-[#00adef] text-[18px]">About</a>  
@@ -73,7 +75,7 @@
     </nav>
       
 
-    <div class="relative w-full h-screen">
+    <div class="relative w-full h-screen"id="main">
       
       <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover z-0">
         <source src="./assets/videos/main21.mp4" type="video/mp4">
@@ -88,7 +90,7 @@
   <div class="max-w-5xl">
   
     <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-[69px] font-bold mb-4 animate-slideInLeft">
-      Travel Smarter, Explore Better!
+      Travel Smarter Explore Better!
     </h1>
 
   
@@ -115,12 +117,12 @@
       
     <div  id="one">
     </div>  
-    <div class="relative w-[80%] mx-auto flex flex-col items-start text-left py-16 max-md:w-[90%] max-sm:w-full max-lg:w-[85%]">
+    <div class="reveal relative w-[80%] mx-auto flex flex-col items-start text-left py-16 max-md:w-[90%] max-sm:w-full max-lg:w-[85%]">
     
       <div class="relative w-full mt-16 max-sm:mt-0">
           
        
-          <div class=" flex flex-col items-start text-left px-4 max-md:px-2 mt-20">
+          <div class=" flex flex-col items-start text-left px-4 max-md:px-2 mt-24">
               <p class="paragraph text-2xl font-semibold text-[#00adef] max-md:text-xl">Travel Beyond</p>
               <h1 class="text-4xl md:text-6xl font-bold leading-snug text-black max-w-lg max-md:text-3xl max-sm:text-2xl max-lg:text-5xl">
                   Explore All Corners of The World With Us
@@ -170,7 +172,7 @@
         Popular Destinations
       </h1>
       <p class="text-lg md:text-xl text-gray-600 mt-4">
-        Explore the world’s most sought-after destinations, from serene beaches to vibrant cities. Discover breathtaking landscapes, rich cultures, and unforgettable experiences waiting for you.
+        Explore the world’s most sought-after destinations, from serene beaches to vibrant cities. Discover breathtaking landscapes, rich cultures and unforgettable experiences waiting for you.
       </p>
       
     </div>
@@ -449,7 +451,7 @@
       </p>
     </div>
 
-    <div class="mt-8 w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 text-sm sm:text-lg md:text-xl text-center max-md:w-[32rem] max-md:pl-[6rem]">
+    <div class="mt-8 w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 text-sm sm:text-lg md:text-xl text-center max-md:w-[32rem] max-md:pl-[6rem]">
       <div class="flex items-center gap-3 sm:gap-4 px-4">
         <i class="fas fa-star text-white text-2xl"></i>
         <span class="text-white">Top-rated services customer satisfaction.</span>
@@ -483,7 +485,7 @@
   <p class="text-2xl font-semibold text-[#00adef]">Experience Carefree Travel</p>
   <h1 class="text-4xl md:text-6xl font-bold leading-snug text-black">Our Services</h1>
   <p class="services text-lg md:text-xl text-gray-600 mt-4">
-    From flight bookings to guided tours, we provide seamless travel solutions tailored to your needs. Enjoy stress-free vacations with expert planning, premium accommodations, and unforgettable experiences.
+    From flight bookings to guided tours, we provide smoothly travel solutions tailored to your needs. Enjoy stress-free vacations with expert planning, premium accommodations and unforgettable experiences.
   </p>
 </div>
 
@@ -491,12 +493,20 @@
 <div class="reveal w-[80%] flex flex-wrap lg:flex-nowrap items-center gap-16 p-10 mx-auto mt-6 justify-center 
             max-md:w-[32rem] max-sm:w-[24rem] max-md:pl-[1.8rem]">
 
-  <!-- Image Section -->
-  <div class="w-full lg:w-1/2 flex justify-center">
-    <img src="./assets/images/services.jpg" alt="Descriptive Image" 
-         class="w-[300px] h-[350px] sm:w-[400px] sm:h-[500px] md:w-[500px] md:h-[600px] lg:w-[600px] lg:h-[700px] 
-                object-cover rounded-lg shadow-lg">
-  </div>
+ <!-- Image Section with overlapping image on the left -->
+<div class="w-full lg:w-1/2 flex justify-center relative">
+  <!-- Reduced size for the first image -->
+  <img src="./assets/images/services.jpg" alt="Descriptive Image" 
+       class="w-[250px] h-[300px] sm:w-[300px] sm:h-[400px] md:w-[400px] md:h-[450px] lg:w-[400px] lg:h-[480px] 
+              object-cover rounded-lg shadow-lg">
+
+  <!-- Overlapping Image on the Left with popup effect on hover -->
+<img src="https://img.freepik.com/free-photo/woman-hand-holding-camera-standing-top-rock-nature-travel-concept_335224-887.jpg?t=st=1740556468~exp=1740560068~hmac=9ad389b48db2a81faad186e0041479e65a6de241a25c069cff62f480ca380341&w=1380" alt="Overlay Image" 
+class="absolute top-1/7 left-[-50px] w-[200px] h-[250px] sm:w-[250px] sm:h-[300px] md:w-[300px] md:h-[350px] 
+       object-cover rounded-lg shadow-xl transition-transform duration-300 ease-in-out hover:scale-110">
+
+</div>
+
 
   <!-- Services Grid -->
   <div class="w-full lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-8 mx-auto max-md:grid-cols-1">
@@ -532,6 +542,7 @@
   </div>
 
 </div>
+
 
 
 
