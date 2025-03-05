@@ -20,7 +20,7 @@
 
     
     <nav id="navbar" class="bg-transparent pt-3 pb-2 font-sans fixed w-full top-0 z-50 transition-all duration-300 ease-in-out" style="font-family: 'Liberation Sans', sans-serif;">
-      <div class="container mx-auto flex items-center justify-between max-md:px-[2rem]"style="padding-inline:3rem;">
+      <div class="container mx-auto flex items-center justify-between px-12 md:px-[6rem] sm:px-12 max-sm:px-12 max-md:px-[3rem]">
        
         <a href="#main">
           <img id="logo-img" src="./assets/images/logo.png" alt="My Logo" class="w-[6rem] max-md:w-[5rem]">
@@ -40,11 +40,7 @@
           </div>
     
          
-          <div class="space-x-10">
-            <a href="https://facebook.com" class="text-white hover:text-[#00adef]"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://twitter.com" class="text-white hover:text-[#00adef]"><i class="fab fa-twitter"></i></a>
-            <a href="https://instagram.com" class="text-white hover:text-[#00adef]"><i class="fab fa-instagram"></i></a>
-          </div>
+          
         </div>
     
   
@@ -64,11 +60,7 @@
         <a href="contact.html" class="text-white hover:text-[#00adef] block w-full text-center py-2">Contact Us</a>
     
      
-        <div class="flex space-x-6 mt-6 justify-center">
-          <a href="https://facebook.com" class="text-gray-700 hover:text-[#00adef] text-xl"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://twitter.com" class="text-gray-700 hover:text-[#00adef] text-xl"><i class="fab fa-twitter"></i></a>
-          <a href="https://instagram.com" class="text-gray-700 hover:text-[#00adef] text-xl"><i class="fab fa-instagram"></i></a>
-        </div>
+        
       </div>
     </nav>
       
@@ -105,105 +97,86 @@
 
       <!-- Card 1 -->
       <div class="relative group overflow-hidden card">
-        <img src="./assets/images/kochi2.png" alt="Location 1" class="w-full h-full object-cover transition-all duration-300">
-        
-        <!-- Overlay (on hover opacity will increase) -->
+        <img src="./assets/images/kochi2.png" alt="Kochi" class="w-full h-full object-cover transition-all duration-300">
         <div class="overlay opacity-80 group-hover:opacity-100 transition-opacity duration-300"></div>
-        
-        <!-- Location Text at the Bottom -->
-        <div class="absolute bottom-4 left-4 text-white text-xl z-10">
-          Kochi
+        <div class="absolute bottom-4 left-4 text-white text-xl z-10">Kochi</div>
+        <div class="content opacity-0 group-hover:opacity-100 transition-all transform translate-y-12 group-hover:translate-y-0 duration-300 flex flex-col items-center">
+          <p class="text-base sm:text-sm max-sm:text-[10px] mb-4 text-center">
+            Planning a trip to Kochi? Enjoy flexible packages, Kerala cuisine, private cabs, cozy stays, and a scenic cruise on the Minar Cochin Cruise Ship.
+          </p>
+          <a href="contact.html" class="border border-white text-white py-2 px-4 text-center hover:bg-white hover:text-gray-800 transition-colors duration-300 sm:px-3 sm:py-2 sm:text-sm">
+            Contact Us
+          </a>
         </div>
-        
-        <!-- Custom overlay (center content on hover or click) -->
-<div class="content opacity-0 group-hover:opacity-100 transition-all transform translate-y-12 group-hover:translate-y-0 duration-300 max-sm:w-[15rem] max-sm:mt-[2rem] flex flex-col items-center">
-  <p class="text-base sm:text-sm max-sm:text-[10px] mb-4 text-center">
-    Planning a trip to Kochi? Enjoy flexible packages, Kerala cuisine, private cabs, cozy stay and a scenic cruise on the Minar Cochin Cruise Ship. Explore historical sites, relax on beaches or dive into Kochi’s culture for an effortless journey!
-  </p>
-  <a href="contact.html" class="border border-white text-white py-2 px-4 text-center hover:bg-white hover:text-gray-800 transition-colors duration-300 sm:px-3 sm:py-2 sm:text-sm">
-    Contact Us
-  </a>
-</div>
-
       </div>
 
       <!-- Card 2 -->
       <div class="relative group overflow-hidden card">
-        <img src="./assets/images/alappuzha5.jpg" alt="Location 2" class="w-full h-full object-cover transition-all duration-300">
-        
-        <!-- Overlay (on hover opacity will increase) -->
+        <img src="./assets/images/alappuzha5.jpg" alt="Alappuzha" class="w-full h-full object-cover transition-all duration-300">
         <div class="overlay opacity-80 group-hover:opacity-100 transition-opacity duration-300"></div>
-        
-        <!-- Location Text at the Bottom -->
-        <div class="absolute bottom-4 left-4 text-white text-xl z-10">
-          Alappuzha
+        <div class="absolute bottom-4 left-4 text-white text-xl z-10">Alappuzha</div>
+        <div class="content opacity-0 group-hover:opacity-100 transition-all transform translate-y-12 group-hover:translate-y-0 duration-300 flex flex-col items-center">
+          <p class="text-base sm:text-sm max-sm:text-[10px] mb-4 text-center">
+            Visit Alappuzha for serene backwaters, luxury houseboats, Kerala cuisine, Shikara rides, and trips to Kumarakom Bird Sanctuary.
+          </p>
+          <a href="contact.html" class="border border-white text-white py-2 px-4 text-center hover:bg-white hover:text-gray-800 transition-colors duration-300 sm:px-3 sm:py-2 sm:text-sm">
+            Contact Us
+          </a>
         </div>
-
-<!-- Custom overlay (center content on hover or click) -->
-<div class="content opacity-0 group-hover:opacity-100 transition-all transform translate-y-12 group-hover:translate-y-0 duration-300 max-sm:w-[15rem] max-sm:mt-[2rem] flex flex-col items-center">
-  <p class="text-base sm:text-sm max-sm:text-[10px] mb-4 text-center">
-    Visit Alappuzha for serene backwaters, luxury houseboats, Kerala cuisine, Shikara rides and trips to Kumarakom Bird Sanctuary. Let us create unforgettable memories for you!
-  </p>
-  <a href="contact.html" class="border border-white text-white py-2 px-4 text-center hover:bg-white hover:text-gray-800 transition-colors duration-300 sm:px-3 sm:py-2 sm:text-sm">
-    Contact Us
-  </a>
-</div>
-
-  
       </div>
 
       <!-- Card 3 -->
       <div class="relative group overflow-hidden card">
-        <img src="./assets/images/thekkadi2.jpg" alt="Location 3" class="w-full h-full object-cover transition-all duration-300">
-        
-        <!-- Overlay (on hover opacity will increase) -->
+        <img src="./assets/images/thekkadi2.jpg" alt="Thekkady" class="w-full h-full object-cover transition-all duration-300">
         <div class="overlay opacity-80 group-hover:opacity-100 transition-opacity duration-300"></div>
-        
-        <!-- Location Text at the Bottom -->
-        <div class="absolute bottom-4 left-4 text-white text-xl z-10">
-          Thekkady
+        <div class="absolute bottom-4 left-4 text-white text-xl z-10">Thekkady</div>
+        <div class="content opacity-0 group-hover:opacity-100 transition-all transform translate-y-12 group-hover:translate-y-0 duration-300 flex flex-col items-center">
+          <p class="text-base sm:text-sm max-sm:text-[10px] mt-4 mb-4 text-center">
+            Explore Thekkady and the Periyar Wildlife Sanctuary with safaris, spice tours, trekking, and elephant rides.
+          </p>
+          <a href="contact.html" class="border border-white text-white py-2 px-4 text-center hover:bg-white hover:text-gray-800 transition-colors duration-300 sm:px-3 sm:py-2 sm:text-sm">
+            Contact Us
+          </a>
         </div>
-
-      <!-- Custom overlay (center content on hover or click) -->
-<div class="content opacity-0 group-hover:opacity-100 transition-all transform translate-y-12 group-hover:translate-y-0 duration-300 max-sm:w-[15rem] max-sm:mt-[2rem] flex flex-col items-center">
-  <p class="text-base sm:text-sm max-sm:text-[10px] mt-4 mb-4 text-center">
-    Explore Thekkady and the Periyar Wildlife Sanctuary with safaris, spice tours, trekking and elephant rides. Enjoy Kerala’s authentic cuisine and a seamless getaway in this scenic destination!
-  </p>
-  <a href="contact.html" class="border border-white text-white py-2 px-4 text-center hover:bg-white hover:text-gray-800 transition-colors duration-300 sm:px-3 sm:py-2 sm:text-sm">
-    Contact Us
-  </a>
-</div>
-
       </div>
 
       <!-- Card 4 -->
       <div class="relative group overflow-hidden card">
-        <img src="./assets/images/kanyakumari2.jpg" alt="Location 4" class="w-full h-full object-cover transition-all duration-300">
-        
-        <!-- Overlay (on hover opacity will increase) -->
+        <img src="./assets/images/kanyakumari2.jpg" alt="Kanyakumari" class="w-full h-full object-cover transition-all duration-300">
         <div class="overlay opacity-80 group-hover:opacity-100 transition-opacity duration-300"></div>
-        
-        <!-- Location Text at the Bottom -->
-        <div class="absolute bottom-4 left-4 text-white text-xl z-10">
-          Kanyakumari
+        <div class="absolute bottom-4 left-4 text-white text-xl z-10">Kanyakumari</div>
+        <div class="content opacity-0 group-hover:opacity-100 transition-all transform translate-y-12 group-hover:translate-y-0 duration-300 flex flex-col items-center">
+          <p class="text-base sm:text-sm max-sm:text-[10px] mb-4 text-center">
+            Discover Kanyakumari, where three seas meet. Famous for sunrises, sunsets, and cultural landmarks like Vivekananda Rock Memorial.
+          </p>
+          <a href="contact.html" class="border border-white text-white py-2 px-4 text-center hover:bg-white hover:text-gray-800 transition-colors duration-300 sm:px-3 sm:py-2 sm:text-sm">
+            Contact Us
+          </a>
         </div>
-
-<!-- Custom overlay (center content on hover or click) -->
-<div class="content opacity-0 group-hover:opacity-100 transition-all transform translate-y-12 group-hover:translate-y-0 duration-300 max-sm:w-[15rem] max-sm:mt-[2rem] flex flex-col items-center">
-  <p class="text-base sm:text-sm max-sm:text-[10px] mb-4 text-center">
-    Discover Kanyakumari, where three seas meet. Famous for its sunrises, sunsets and cultural landmarks like the Vivekananda Rock Memorial and Thiruvalluvar Statue, it’s a must-visit for spirituality, beauty and relaxation.
-  </p>
-  <a href="contact.html" class="border border-white text-white py-2 px-4 text-center hover:bg-white hover:text-gray-800 transition-colors duration-300 sm:px-3 sm:py-2 sm:text-sm">
-    Contact Us
-  </a>
-</div>
-
-
       </div>
-      
+    </div>
+
+ <!-- Centered Munnar Card -->
+<div class="flex justify-center lg:block mt-10">
+  <div class="relative group overflow-hidden card w-full sm:w-[48%] md:w-[48%] lg:w-[50%] mx-auto">
+    <img src="./assets/images/munnar.jpg" alt="Munnar" class="w-full h-full object-cover transition-all duration-300">
+    <div class="overlay opacity-80 group-hover:opacity-100 transition-opacity duration-300"></div>
+    <div class="absolute bottom-4 left-4 text-white text-xl z-10">Munnar</div>
+    <div class="content opacity-0 group-hover:opacity-100 transition-all transform translate-y-12 group-hover:translate-y-0 duration-300 flex flex-col items-center">
+      <p class="text-base sm:text-sm max-sm:text-[10px] mb-4 text-center">
+        Visit Munnar to explore lush tea plantations, misty hills, waterfalls, and wildlife at Eravikulam National Park. Enjoy nature’s tranquility with adventure and scenic beauty.
+      </p>
+      <a href="contact.html" class="border border-white text-white py-2 px-4 text-center hover:bg-white hover:text-gray-800 transition-colors duration-300 sm:px-3 sm:py-2 sm:text-sm">
+        Contact Us
+      </a>
     </div>
   </div>
+</div>
+
+  </div>
 </section>
+
+
 
 <!-- Additional CSS -->
 <style>
@@ -382,10 +355,10 @@
     <h3 class="text-3xl sm:text-4xl font-bold mb-4 text-white">About Us</h3>
     <p class="text-base sm:text-lg mb-4 text-white">Explore unforgettable destinations and seamless travel experiences with us—your perfect journey starts here!</p>
     <div class="flex justify-center space-x-6 sm:space-x-8">
-      <a href="https://facebook.com" class="text-xl sm:text-2xl text-white hover:text-[#00adef]"><i class="fab fa-facebook"></i></a>
-      <a href="https://twitter.com" class="text-xl sm:text-2xl text-white hover:text-[#00adef]"><i class="fab fa-twitter"></i></a>
-      <a href="https://instagram.com" class="text-xl sm:text-2xl text-white hover:text-[#00adef]"><i class="fab fa-instagram"></i></a>
-      <a href="https://linkedin.com" class="text-xl sm:text-2xl text-white hover:text-[#00adef]"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61573930676651" class="text-xl sm:text-2xl text-white hover:text-[#00adef]"><i class="fab fa-facebook"></i></a>
+      <!-- <a href="https://twitter.com" class="text-xl sm:text-2xl text-white hover:text-[#00adef]"><i class="fab fa-twitter"></i></a> -->
+      <a href="https://www.instagram.com/eco_tours_and_travels?igsh=MWRzaG16ZHc2YXlzZQ==" class="text-xl sm:text-2xl text-white hover:text-[#00adef]"><i class="fab fa-instagram"></i></a>
+      <!-- <a href="https://linkedin.com" class="text-xl sm:text-2xl text-white hover:text-[#00adef]"><i class="fab fa-linkedin"></i></a> -->
     </div>
   </div>
 
