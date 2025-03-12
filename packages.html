@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+   
+  </head>
+
+  <body>
+
+    
+    <nav id="navbar" class="bg-transparent pt-3 pb-2 font-sans fixed w-full top-0 z-50 transition-all duration-300 ease-in-out" style="font-family: 'Liberation Sans', sans-serif;">
+      <div class="container mx-auto flex items-center justify-between px-12 md:px-[6rem] sm:px-12 max-sm:px-12 max-md:px-[3rem]">
+       
+        <a href="#main">
+          <img id="logo-img" src="./assets/images/logo.png" alt="My Logo" class="w-[6rem] max-md:w-[5rem]">
+        </a>
+        
+        
+        
+    
+        
+        <div class="hidden lg:flex items-center space-x-24 ml-auto">
+          <div class="space-x-10 text-xl">
+            <a href="index.html" class="text-white hover:text-[#00adef] text-[18px] ">Home</a>
+            <a href="index.html#services" class="text-white hover:text-[#00adef] text-[18px]">Services</a>
+            <a href="packages.html" class="text-white hover:text-[#00adef] text-[18px]  active">Packages</a>
+            <a href="about.html" class="text-white hover:text-[#00adef] text-[18px]">About</a>  
+            <a href="contact.html" class="text-white hover:text-[#00adef] text-[18px]">Contact Us</a>
+          </div>
+    
+         
+          
+        </div>
+    
+  
+        <div class="lg:hidden flex items-center">
+          <button id="menu-toggle" class="text-white hover:text-[#00adef] focus:outline-none">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    
+    
+      <div id="mobile-menu" class="lg:hidden bg-[#00adef] shadow-md p-8 space-y-6 hidden absolute w-full top-full mt-2 right-0 z-40 max-h-[80vh] overflow-y-auto">
+        <a href="index.html" class="text-white hover:text-[#00adef] block w-full text-center py-2">Home</a>
+        <a href="index.html#services" class="text-white hover:text-[#00adef] block w-full text-center py-2">Services</a>
+        <a href="packages.html" class="text-white hover:text-[#00adef] block w-full text-center py-2">Packages</a>
+        <a href="about.html" class="text-white hover:text-[#00adef] block w-full text-center py-2">About</a>  
+        <a href="contact.html" class="text-white hover:text-[#00adef] block w-full text-center py-2">Contact Us</a>
+    
+     
+        
+      </div>
+    </nav>
+      
+
+
+
+
+
+
+  <div class="relative w-full h-[70vh] ">
+  
+    <img src="./assets/images/packagebg.jpg" alt="Background Image" class="absolute inset-0 w-full h-full object-cover z-0">
+  
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+
+    <div class="absolute inset-0 flex items-center justify-center text-center text-white px-6 ">
+      <div class="leading-loose max-md:mt-[6rem]">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">Unforgettable Journeys Await!</h1>
+        <p class="text-xl md:text-2xl">Discover Exclusive Travel Packages Tailored Just for You</p>
+        <a href="#packages" class="mt-6 inline-block bg-[#00adef] text-white text-lg font-semibold py-3 px-6 rounded-full hover:bg-white hover:text-[black] transition-all duration-300">
+          Explore Packages
+        </a>
+      </div>
+    </div>
+    
+</div>
+
+<div class="w-1/4 sm:w-1/2 md:w-1/4 h-16 mt-20  text-left max-sm:w-[60%]">
+  <h1 class="bg-[#00adef] text-white py-4 px-6 text-2xl font-bold">1 Day Packages</h1>
+</div>
+
+<!-- Cards Section -->
+<div class="container mx-auto w-[90%] md:w-[70%] px-4 mt-10">
+  <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12">
+      
+      <!-- Card 1 -->
+      <div class="bg-white shadow-lg overflow-hidden rounded-lg border border-gray-200 hover:shadow-xl transition duration-300">
+        <img src="./assets/images/kochi2.png" alt="Kochi" class="w-full h-64 md:h-56 object-cover">
+        <div class="p-4">
+            <div class="flex justify-between items-center flex-wrap">
+                <h3 class="text-2xl font-semibold text-gray-800">KOCHI</h3>
+                <div class="flex space-x-3">
+                    <a href="https://wa.me/919876543210" class="text-green-500 hover:text-green-700"><i class="fab fa-whatsapp text-2xl"></i></a>
+                    <a href="tel:+919876543210" class="text-[#00adef]"><i class="fas fa-phone-alt text-2xl"></i></a>
+                </div>
+            </div>
+            <p class="text-gray-600 mt-1">1 Day</p>
+            <hr class="my-3 border-gray-300">
+            <ul class="text-gray-700 space-y-2 mb-14">
+                <li class="flex items-center"><i class="fas fa-utensils text-[#00adef] mr-2"></i> Food Included</li>
+                <li class="flex items-center"><i class="fas fa-binoculars text-[#00adef] mr-2"></i> Sightseeing</li>
+            </ul>
+            <div class="flex justify-between items-center bg-gray-200 px-4 py-2 h-16 rounded-lg">
+                <span class="text-gray-700"><i class="fas fa-user-friends text-[#00adef] mr-2"></i> 2 Persons</span>
+                <span class="bg-[#00adef] text-white font-semibold px-3 py-1 rounded-lg shadow-md">8K</span>
+            </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white shadow-lg overflow-hidden rounded-lg border border-gray-200 hover:shadow-xl transition duration-300">
+        <img src="./assets/images/alappuzha5.jpg" alt="Alappuzha" class="w-full h-64 md:h-56 object-cover">
+        <div class="p-4">
+            <div class="flex justify-between items-center flex-wrap">
+                <h3 class="text-2xl font-semibold text-gray-800">ALAPPUZHA</h3>
+                <div class="flex space-x-3">
+                    <a href="https://wa.me/919876543210" class="text-green-500 hover:text-green-700"><i class="fab fa-whatsapp text-2xl"></i></a>
+                    <a href="tel:+919876543210" class="text-[#00adef]"><i class="fas fa-phone-alt text-2xl"></i></a>
+                </div>
+            </div>
+            <p class="text-gray-600 mt-1">1 Day</p>
+            <hr class="my-3 border-gray-300">
+            <ul class="text-gray-700 space-y-2 mb-14">
+                <li class="flex items-center"><i class="fas fa-utensils text-[#00adef] mr-2"></i> Food Included</li>
+                <li class="flex items-center"><i class="fas fa-binoculars text-[#00adef] mr-2"></i> Sightseeing</li>
+            </ul>
+            <div class="flex justify-between items-center bg-gray-200 px-4 py-2 h-16 rounded-lg">
+                <span class="text-gray-700"><i class="fas fa-user-friends text-[#00adef] mr-2"></i> 2 Persons</span>
+                <span class="bg-[#00adef] text-white font-semibold px-3 py-1 rounded-lg shadow-md">8K</span>
+            </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white shadow-lg overflow-hidden rounded-lg border border-gray-200 hover:shadow-xl transition duration-300">
+        <img src="./assets/images/alappuzha3.jpg" alt="Alappuzha" class="w-full h-64 md:h-56 object-cover">
+        <div class="p-4">
+            <div class="flex justify-between items-center flex-wrap">
+                <h3 class="text-2xl font-semibold text-gray-800">ALAPPUZHA</h3>
+                <div class="flex space-x-3">
+                    <a href="https://wa.me/919876543210" class="text-green-500 hover:text-green-700"><i class="fab fa-whatsapp text-2xl"></i></a>
+                    <a href="tel:+919876543210" class="text-[#00adef]"><i class="fas fa-phone-alt text-2xl"></i></a>
+                </div>
+            </div>
+            <p class="text-gray-600 mt-1">1 Day</p>
+            <hr class="my-3 border-gray-300">
+            <ul class="text-gray-700 space-y-2 mb-6">
+                <li class="flex items-center"><i class="fas fa-utensils text-[#00adef] mr-2"></i> Food Included</li>
+                <li class="flex items-center"><i class="fas fa-ship text-[#00adef] mr-2"></i> House Boat</li>
+                <li class="flex items-center"><i class="fas fa-binoculars text-[#00adef] mr-2"></i> Sightseeing</li>
+            </ul>
+            <div class="flex justify-between items-center bg-gray-200 px-4 py-2 h-16 rounded-lg">
+                <span class="text-gray-700"><i class="fas fa-user-friends text-[#00adef] mr-2"></i> 2 Persons</span>
+                <span class="bg-[#00adef] text-white font-semibold px-3 py-1 rounded-lg shadow-md">12K</span>
+            </div>
+        </div>
+      </div>
+
+  </div>
+</div>
+
+
+
+
+
+<div class="w-1/4 sm:w-1/2 md:w-1/4 h-16 mt-20  text-left max-sm:w-[60%]">
+  <h1 class="bg-[#00adef] text-white py-4 px-6 text-2xl font-bold">7 Day Packages</h1>
+</div>
+<!-- Cards Section -->
+<div class="container mx-auto w-[90%] sm:w-[80%] lg:w-[70%] px-4 mt-10">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-12">
+      
+      <!-- Card 1 -->
+      <div class="bg-white shadow-lg overflow-hidden h-auto rounded-lg border border-gray-200 hover:shadow-xl transition duration-300 relative">
+        <!-- Tour Image -->
+        <img src="./assets/images/kochi2.png" alt="Kochi" class="w-full h-56 md:h-64 object-cover">
+    
+        <div class="p-4">
+            <!-- Header: Place Name + Contact Icons -->
+            <div class="flex justify-between items-center flex-wrap">
+                <h3 class="text-xl md:text-2xl font-semibold text-gray-800 text-left">ALL KERALA</h3>
+                <div class="flex space-x-3">
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/919876543210" target="_blank" class="text-green-500 hover:text-green-700">
+                        <i class="fab fa-whatsapp text-xl md:text-2xl"></i>
+                    </a>
+                    <!-- Call -->
+                    <a href="tel:+919876543210" class="text-[#00adef]">
+                        <i class="fas fa-phone-alt text-xl md:text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+    
+            <p class="text-left text-gray-600 mt-1">7 Days</p>
+            <hr class="my-3 border-gray-300">
+    
+            <!-- Facilities -->
+            <ul class="text-gray-700 space-y-2 text-sm md:text-base">
+              <li class="flex items-center">
+                  <i class="fas fa-utensils text-[#00adef] mr-2"></i> Food Included
+              </li>
+              <li class="flex items-center">
+                  <i class="fas fa-binoculars text-[#00adef] mr-2"></i> Sightseeing
+              </li>
+              <li class="flex items-center">
+                  <i class="fas fa-hotel text-[#00adef] mr-2"></i> Resort
+              </li>
+              <li class="flex items-center">
+                  <i class="fas fa-ship text-[#00adef] mr-2"></i> Boating
+              </li>
+          </ul>
+          
+            <!-- Bottom Rectangle Box -->
+            <div class="flex justify-between items-center bg-gray-200 mt-4 px-4 py-2 h-16 md:h-20 rounded-lg">
+                <span class="flex items-center text-gray-700 text-sm md:text-base">
+                    <i class="fas fa-user-friends text-[#00adef] mr-2"></i> 2 Persons
+                </span>
+                <span class="bg-[#00adef] text-white font-semibold px-3 py-1 rounded-lg shadow-md text-sm md:text-base">
+                    70K
+                </span>
+            </div>
+        </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- FontAwesome Icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- Additional CSS -->
+<style>
+  /* Overlay styles */
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 1;
+  }
+
+  /* Content inside the overlay */
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 2;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* Ensuring that the overlay appears only on hover */
+  .group:hover .overlay {
+    opacity: 1;
+  }
+
+  /* Location Text */
+  .absolute {
+    position: absolute;
+  }
+  .bottom-4 {
+    bottom: 1rem;
+  }
+  .left-4 {
+    left: 1rem;
+  }
+  .z-10 {
+    z-index: 10;
+  }
+
+  /* Mobile: Toggle visibility of content on click */
+  @media screen and (max-width: 768px) {
+    .card {
+      cursor: pointer;
+    }
+      /* Content inside the overlay */
+  .content {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 2;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+  }
+    .card.open .content {
+      opacity: 1 !important;
+      transform: translate(-50%, -50%) !important;
+    }
+
+    /* Ensure the content still has the transform effect on hover for desktop */
+    .group:hover .content {
+      opacity: 1 !important;
+      transform: translate(-50%, -50%) !important;
+    }
+  }
+</style>
+
+<!-- JavaScript for Mobile Click Toggle -->
+<script>
+  // Select all cards
+  const cards = document.querySelectorAll('.card');
+  
+  cards.forEach(card => {
+    card.addEventListener('click', function() {
+      // Close all cards first
+      cards.forEach(c => c.classList.remove('open'));
+      
+      // Toggle the 'open' class for the clicked card to display content on mobile
+      this.classList.add('open');
+    });
+  });
+</script>
+
+
+
+
+<section class="py-16">
+  <div class=" container mt-20 mx-auto px-10 lg:px-20 xl:px-28 flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-20 w-full">
+    <!-- Left Section -->
+    <div class="w-full lg:w-[60%] space-y-6 text-center lg:text-left">
+      <!-- Rounded Button -->
+      <button class="bg-white text-[#00adef] px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-shadow duration-300">
+        Start Your Journey
+      </button>
+
+      <h2 class="text-5xl md:text-6xl xl:text-7xl font-semibold leading-tight">
+        Build Your Ideal Travel <span class="text-[#00adef]">Package</span>
+      </h2>
+
+      <!-- Sentence -->
+      <p class="text-lg text-gray-700 leading-relaxed">
+        Explore our exclusive travel packages that offer the perfect blend of Kerala’s nature, culture and relaxation. From wildlife safaris to serene backwaters and beautiful beaches, our carefully curated packages ensure unforgettable experiences and comfortable stays.
+      </p>
+
+      <!-- Bar with icons and button -->
+      <div class="relative mt-8 ">
+        <div class="relative bg-white p-5 xl:p-6 rounded-lg shadow-lg flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6 z-10 lg:w-[39rem]">
+
+          <!-- Navigation Button -->
+          <a href="contact.html" class="bg-[#00adef] text-white py-3 px-6 rounded-full hover:bg-blue-400 transition-all duration-300">
+            Contact Us
+          </a>
+
+          <!-- Vertical Line -->
+          <div class="hidden md:block h-10 w-0.5 bg-gray-400"></div>
+
+          <!-- Call Icon and Text -->
+          <a href="tel:+91 9691488797" class="flex items-center text-[#00adef] space-x-2 border border-[#00adef] rounded-full px-4 py-2">
+            <i class="fas fa-phone-alt text-xl"></i>
+            <span class="text-lg">Call Us</span>
+          </a>
+
+          <!-- Vertical Line -->
+          <div class="hidden md:block h-10 w-0.5 bg-gray-400"></div>
+
+          <!-- WhatsApp Icon and Text -->
+          <a href="https://wa.me/91 9691488797" class="flex items-center text-green-500 space-x-2">
+            <i class="fab fa-whatsapp text-2xl"></i>
+            <span class="text-lg">WhatsApp</span>
+          </a>
+
+          <!-- Right Corner Color -->
+          <div class="absolute top-0 right-0 w-16 md:w-32 h-full bg-[#00adef] rounded-br-lg rounded-tr-lg"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Section (Image) -->
+    <div class="w-full lg:w-[40%] flex justify-center">
+      <img src="./assets/images/travel2.jpg" alt="Kerala" class="w-[90%] md:w-[500px] h-auto md:h-[600px] rounded-lg shadow-xl">
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class=" bg-gradient-to-r from-[#00adef] via-black to-[#464646] w-full mt-20 h-auto flex flex-wrap lg:flex-nowrap gap-10 px-6 sm:px-10 py-10 items-center justify-center">
+
+  <div class="w-full sm:w-1/2 lg:w-1/4 h-full p-6 text-center flex flex-col items-center">
+    <h3 class="text-3xl sm:text-4xl font-bold mb-4 text-white">About Us</h3>
+    <p class="text-base sm:text-lg mb-4 text-white">Explore unforgettable destinations and seamless travel experiences with us—your perfect journey starts here!</p>
+    <div class="flex justify-center space-x-6 sm:space-x-8">
+      <a href="https://www.facebook.com/profile.php?id=61573930676651" class="text-xl sm:text-2xl text-white hover:text-[#00adef]"><i class="fab fa-facebook"></i></a>
+      <!-- <a href="https://twitter.com" class="text-xl sm:text-2xl text-white hover:text-[#00adef]"><i class="fab fa-twitter"></i></a> -->
+      <a href="https://www.instagram.com/eco_tours_and_travels?igsh=MWRzaG16ZHc2YXlzZQ==" class="text-xl sm:text-2xl text-white hover:text-[#00adef]"><i class="fab fa-instagram"></i></a>
+      <!-- <a href="https://linkedin.com" class="text-xl sm:text-2xl text-white hover:text-[#00adef]"><i class="fab fa-linkedin"></i></a> -->
+    </div>
+  </div>
+
+  <div class="w-full sm:w-1/2 lg:w-1/4 h-full p-6 text-center flex flex-col items-center">
+    <h3 class="text-3xl sm:text-4xl font-bold mb-4 text-white">Quick Links</h3>
+    <ul class="text-base sm:text-lg text-white space-y-2">
+      <li><a href="#" class="hover:text-[#00adef]">Home</a></li>
+      <li><a href="#services" class="hover:text-[#00adef]">Services</a></li>
+      <li><a href="packages.html" class="hover:text-[#00adef]">Packages</a></li>
+      <li><a href="about.html" class="hover:text-[#00adef]">About</a></li>
+      <li><a href="contact.html" class="hover:text-[#00adef]">Contact Us</a></li>
+    </ul>
+  </div>
+
+  <div class="w-full sm:w-1/2 lg:w-1/4 h-full p-6 text-center flex flex-col items-center">
+    <h3 class="text-3xl sm:text-4xl font-bold mb-4 text-white">Our Services</h3>
+    <ul class="text-base sm:text-lg text-white space-y-2">
+      <li><a href="" class="hover:text-[#00adef]">Attractive Packages</a></li>
+      <li><a href="" class="hover:text-[#00adef]">Ride Reservation</a></li>
+      <li><a href="" class="hover:text-[#00adef]">Pass Reservation</a></li>
+      <li><a href="" class="hover:text-[#00adef]">Stay Arrangements</a></li>
+      <li><a href="" class="hover:text-[#00adef]">Cruise Ship</a></li>
+    </ul>
+  </div>
+
+  <div class="w-full sm:w-1/2 lg:w-1/4 h-full p-6 text-center flex flex-col items-center">
+    <h3 class="text-3xl sm:text-4xl font-bold mb-4 text-white">Help & Contact</h3>
+    <p class="text-base sm:text-lg mb-4 text-white">If you have any questions, feel free to contact us:</p>
+    <ul class="text-base sm:text-lg text-white space-y-2">
+      <li>Phone: <a href="tel:+919691488797" class="text-[#00adef] hover:underline">91 9691488797</a></li>
+      <li>Email: <a href="mailto:infoecotoursandtravels@gmail.com" class="text-[#00adef] hover:underline">infoecotoursandtravels@gmail.com</a></li>
+      <li>Address:1st Floor, Parakattu Building, Kumbalam Jn, Kochi - 682506 </li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="w-full text-center bg-black text-white py-4">
+  <p class="text-base sm:text-lg">© N-me 360, All Rights Reserved.</p>
+</div>
+
+<script src="./js/index.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const reveals = document.querySelectorAll(".reveal");
+  
+    function revealOnScroll() {
+      reveals.forEach((element) => {
+        const windowHeight = window.innerHeight;
+        const elementTop = element.getBoundingClientRect().top;
+        const elementVisible = 100; // Adjust threshold
+  
+        if (elementTop < windowHeight - elementVisible) {
+          element.classList.add("active");
+        } else {
+          element.classList.remove("active");
+        }
+      });
+    }
+  
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll(); // Run once in case elements are in view on load
+  });
+  
+</script>
+
+</body>
+</html>
