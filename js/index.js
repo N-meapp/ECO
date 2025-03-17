@@ -26,31 +26,33 @@ menuLinks.forEach(link => {
 
 window.addEventListener('scroll', function () {
   const links = navbar.querySelectorAll('a');
+  const dropdownButton = document.getElementById('dropdownButton'); // Packages button
+  const dropdownMenu = document.getElementById('dropdownMenu'); // Dropdown menu
+  const dropdownLinks = dropdownMenu.querySelectorAll('a'); // Dropdown options
 
   if (window.scrollY > 50) {
     navbar.classList.add('scrolled');
     navbar.classList.remove('bg-transparent');
-    logo.src = "./assets/images/logo2.png"; // Change to logo2.png when scrolling
-    menuToggle.classList.add('text-black'); // Change toggle icon to black
-    menuToggle.classList.remove('text-white'); // Remove white text
+    logo.src = "./assets/images/logo2.png"; // Change logo on scroll
+    menuToggle.classList.add('text-black');
+    menuToggle.classList.remove('text-white');
 
     links.forEach(link => {
-      link.classList.remove('text-white');
       link.classList.add('text-black');
+      link.classList.remove('text-white');
     });
-  } else {
-    navbar.classList.remove('scrolled');
-    navbar.classList.add('bg-transparent');
-    logo.src = "./assets/images/logo.png"; // Change back to logo.png when at the top
-    menuToggle.classList.remove('text-black'); // Reset toggle icon to white
-    menuToggle.classList.add('text-white'); // Keep it white at top
 
-    links.forEach(link => {
-      link.classList.add('text-white');
-      link.classList.remove('text-black');
+    // Ensure Packages button and dropdown links turn black
+    dropdownButton.classList.add('text-black');
+    dropdownButton.classList.remove('text-white');
+
+    dropdownLinks.forEach(link => {
+      link.classList.add('text-black');
+      link.classList.remove('text-white');
     });
-  }
+  } 
 });
+
 
 
 

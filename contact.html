@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New</title>
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
@@ -16,29 +16,35 @@
   <body>
     <nav id="navbar" class="bg-transparent pt-3 pb-2 font-sans fixed w-full top-0 z-50 transition-all duration-300 ease-in-out" style="font-family: 'Liberation Sans', sans-serif;">
       <div class="container mx-auto flex items-center justify-between px-12 md:px-[6rem] sm:px-12 max-sm:px-12 max-md:px-[3rem]">
-       
         <a href="#main">
           <img id="logo-img" src="./assets/images/logo.png" alt="My Logo" class="w-[6rem] max-md:w-[5rem]">
         </a>
-        
-        
-        
     
-        
         <div class="hidden lg:flex items-center space-x-24 ml-auto">
-          <div class="space-x-10 text-xl">
-            <a href="index.html" class="text-white hover:text-[#00adef] text-[18px] ">Home</a>
+          <div class="space-x-10 text-xl relative">
+            <a href="index.html" class="text-white hover:text-[#00adef] text-[18px] active">Home</a>
             <a href="index.html#services" class="text-white hover:text-[#00adef] text-[18px]">Services</a>
-            <a href="packages.html" class="text-white hover:text-[#00adef] text-[18px]">Packages</a>
-            <a href="about.html" class="text-white hover:text-[#00adef] text-[18px]">About</a>  
-            <a href="contact.html" class="text-white hover:text-[#00adef] text-[18px]  active">Contact Us</a>
-          </div>
     
-         
-         
+          
+            <div class="relative inline-block">
+              <button id="dropdownButton" class="text-white hover:text-[#00adef] text-[18px] flex items-center">
+                Packages
+                <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M5.5 7.5L10 12l4.5-4.5" clip-rule="evenodd"></path>
+                </svg>
+              </button>
+              <div id="dropdownMenu" class="absolute text-[18px] left-0 mt-1 hidden bg-white shadow-md rounded-lg w-40">
+                <a href="packages.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">All</a>
+                <a href="detail1.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">1 Day</a>
+                <a href="detail2.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">7 Days</a>
+              </div>
+            </div>
+    
+            <a href="about.html" class="text-white hover:text-[#00adef] text-[18px]">About</a>
+            <a href="contact.html" class="text-white hover:text-[#00adef] text-[18px]">Contact Us</a>
+          </div>
         </div>
     
-  
         <div class="lg:hidden flex items-center">
           <button id="menu-toggle" class="text-white hover:text-[#00adef] focus:outline-none">
             <i class="fas fa-bars"></i>
@@ -46,19 +52,57 @@
         </div>
       </div>
     
-    
       <div id="mobile-menu" class="lg:hidden bg-[#00adef] shadow-md p-8 space-y-6 hidden absolute w-full top-full mt-2 right-0 z-40 max-h-[80vh] overflow-y-auto">
-        <a href="index.html" class="text-white hover:text-[#00adef] block w-full text-center py-2">Home</a>
-        <a href="index.html#services" class="text-white hover:text-[#00adef] block w-full text-center py-2">Services</a>
-        <a href="packages.html" class="text-white hover:text-[#00adef] block w-full text-center py-2">Packages</a>
-        <a href="about.html" class="text-white hover:text-[#00adef] block w-full text-center py-2">About</a>  
-        <a href="contact.html" class="text-white hover:text-[#00adef] block w-full text-center py-2">Contact Us</a>
+        <a href="index.html" class="text-white hover:text-gray-200 block w-full text-center py-2">Home</a>
+        <a href="index.html#services" class="text-white hover:text-gray-200 block w-full text-center py-2">Services</a>
     
-     
-       
+        <!-- Mobile Packages Dropdown -->
+        <div class="relative">
+          <button id="mobile-dropdownButton" class="text-white hover:text-gray-200 w-full text-center py-2 flex items-center justify-center">
+            Packages
+            <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M5.5 7.5L10 12l4.5-4.5" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+          <div id="mobile-dropdownMenu" class="hidden mt-1 bg-white shadow-md rounded-lg w-full">
+            <a href="packages.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">All</a>
+            <a href="detail1.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">1 Day</a>
+            <a href="detail2.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">7 Days</a>
+          </div>
+        </div>
+    
+        <a href="about.html" class="text-white hover:text-gray-200 block w-full text-center py-2">About</a>
+        <a href="contact.html" class="text-white hover:text-gray-200 block w-full text-center py-2">Contact Us</a>
       </div>
     </nav>
-      
+    
+    <script>
+      // Toggle desktop dropdown
+      document.getElementById("dropdownButton").addEventListener("click", function() {
+        document.getElementById("dropdownMenu").classList.toggle("hidden");
+      });
+    
+      // Toggle mobile dropdown
+      document.getElementById("mobile-dropdownButton").addEventListener("click", function() {
+        document.getElementById("mobile-dropdownMenu").classList.toggle("hidden");
+      });
+    
+      // Close dropdowns if clicked outside
+      document.addEventListener("click", function(event) {
+        let dropdown = document.getElementById("dropdownMenu");
+        let mobileDropdown = document.getElementById("mobile-dropdownMenu");
+        let button = document.getElementById("dropdownButton");
+        let mobileButton = document.getElementById("mobile-dropdownButton");
+    
+        if (!button.contains(event.target) && !dropdown.contains(event.target)) {
+          dropdown.classList.add("hidden");
+        }
+        if (!mobileButton.contains(event.target) && !mobileDropdown.contains(event.target)) {
+          mobileDropdown.classList.add("hidden");
+        }
+      });
+    </script>
+    
 
 
 

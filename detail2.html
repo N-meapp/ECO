@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+   
+  </head>
+
+  <body>
+
+    
+    <nav id="navbar" class="bg-transparent pt-3 pb-2 font-sans fixed w-full top-0 z-50 transition-all duration-300 ease-in-out" style="font-family: 'Liberation Sans', sans-serif;">
+        <div class="container mx-auto flex items-center justify-between px-12 md:px-[6rem] sm:px-12 max-sm:px-12 max-md:px-[3rem]">
+          <a href="#main">
+            <img id="logo-img" src="./assets/images/logo.png" alt="My Logo" class="w-[6rem] max-md:w-[5rem]">
+          </a>
+      
+          <div class="hidden lg:flex items-center space-x-24 ml-auto">
+            <div class="space-x-10 text-xl relative">
+              <a href="index.html" class="text-white hover:text-[#00adef] text-[18px] active">Home</a>
+              <a href="index.html#services" class="text-white hover:text-[#00adef] text-[18px]">Services</a>
+      
+            
+              <div class="relative inline-block">
+                <button id="dropdownButton" class="text-white hover:text-[#00adef] text-[18px] flex items-center">
+                  Packages
+                  <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M5.5 7.5L10 12l4.5-4.5" clip-rule="evenodd"></path>
+                  </svg>
+                </button>
+                <div id="dropdownMenu" class="absolute text-[18px] left-0 mt-1 hidden bg-white shadow-md rounded-lg w-40">
+                  <a href="packages.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">All</a>
+                  <a href="detail1.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">1 Day</a>
+                  <a href="detail2.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">7 Days</a>
+                </div>
+              </div>
+      
+              <a href="about.html" class="text-white hover:text-[#00adef] text-[18px]">About</a>
+              <a href="contact.html" class="text-white hover:text-[#00adef] text-[18px]">Contact Us</a>
+            </div>
+          </div>
+      
+          <div class="lg:hidden flex items-center">
+            <button id="menu-toggle" class="text-white hover:text-[#00adef] focus:outline-none">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      
+        <div id="mobile-menu" class="lg:hidden bg-[#00adef] shadow-md p-8 space-y-6 hidden absolute w-full top-full mt-2 right-0 z-40 max-h-[80vh] overflow-y-auto">
+          <a href="index.html" class="text-white hover:text-gray-200 block w-full text-center py-2">Home</a>
+          <a href="index.html#services" class="text-white hover:text-gray-200 block w-full text-center py-2">Services</a>
+      
+          <!-- Mobile Packages Dropdown -->
+          <div class="relative">
+            <button id="mobile-dropdownButton" class="text-white hover:text-gray-200 w-full text-center py-2 flex items-center justify-center">
+              Packages
+              <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.5 7.5L10 12l4.5-4.5" clip-rule="evenodd"></path>
+              </svg>
+            </button>
+            <div id="mobile-dropdownMenu" class="hidden mt-1 bg-white shadow-md rounded-lg w-full">
+              <a href="packages.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">All</a>
+              <a href="detail1.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">1 Day</a>
+              <a href="detail2.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">7 Days</a>
+            </div>
+          </div>
+      
+          <a href="about.html" class="text-white hover:text-gray-200 block w-full text-center py-2">About</a>
+          <a href="contact.html" class="text-white hover:text-gray-200 block w-full text-center py-2">Contact Us</a>
+        </div>
+      </nav>
+      
+      <script>
+        // Toggle desktop dropdown
+        document.getElementById("dropdownButton").addEventListener("click", function() {
+          document.getElementById("dropdownMenu").classList.toggle("hidden");
+        });
+      
+        // Toggle mobile dropdown
+        document.getElementById("mobile-dropdownButton").addEventListener("click", function() {
+          document.getElementById("mobile-dropdownMenu").classList.toggle("hidden");
+        });
+      
+        // Close dropdowns if clicked outside
+        document.addEventListener("click", function(event) {
+          let dropdown = document.getElementById("dropdownMenu");
+          let mobileDropdown = document.getElementById("mobile-dropdownMenu");
+          let button = document.getElementById("dropdownButton");
+          let mobileButton = document.getElementById("mobile-dropdownButton");
+      
+          if (!button.contains(event.target) && !dropdown.contains(event.target)) {
+            dropdown.classList.add("hidden");
+          }
+          if (!mobileButton.contains(event.target) && !mobileDropdown.contains(event.target)) {
+            mobileDropdown.classList.add("hidden");
+          }
+        });
+      </script>
+      
+
+
+
+
+
+
+  <div class="relative w-full h-[70vh] ">
+  
+    <img src="./assets/images/packagebg.jpg" alt="Background Image" class="absolute inset-0 w-full h-full object-cover z-0">
+  
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+
+    <div class="absolute inset-0 flex items-center justify-center text-center text-white px-6 ">
+      <div class="leading-loose max-md:mt-[6rem]">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">Unforgettable Journeys Await!</h1>
+        <p class="text-xl md:text-2xl">Discover Exclusive Travel Packages Tailored Just for You</p>
+        <a href="#packages" class="mt-6 inline-block bg-[#00adef] text-white text-lg font-semibold py-3 px-6 rounded-full hover:bg-white hover:text-[black] transition-all duration-300">
+          Explore Packages
+        </a>
+      </div>
+    </div>
+    
+</div>
+
+
+<div class="flex justify-center mt-20">
+    <h1 class="bg-[#00adef] text-white py-3 px-8 text-3xl font-bold shadow-lg rounded-tr-lg rounded-bl-lg">
+        7 Day Packages 
+    </h1>
+</div>
+
+<div class="flex justify-center mt-6">
+    <p class="text-lg md:text-xl text-gray-700 leading-relaxed max-w-5xl text-center px-4">
+        Experience an incredible 7-day journey packed with breathtaking landscapes, cultural wonders,  
+        and immersive adventures. Discover hidden gems, unwind in serene locations, and create  
+        unforgettable memories every step of the way!
+    </p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container mx-auto w-[90%] md:w-[70%] px-4 mt-24">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+        <!-- Image Section -->
+        <div class="flex relative">
+            <div class="absolute top-4 left-0 bg-gradient-to-r from-[#00adef] to-[#00adef] text-white font-bold text-sm px-6 py-2 shadow-md uppercase tracking-wide skew-x-[-15deg]">
+                7 Days
+            </div>
+            <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8a2VyYWxhfGVufDB8fDB8fHww" alt="Kerala Trip" class="w-full h-full object-cover rounded-lg shadow-lg">
+        </div>
+
+        <!-- Content Section -->
+        <div class="space-y-4 flex flex-col justify-between">
+            <h2 class="text-3xl font-bold text-gray-800">All Kerala Trip</h2>
+            <p class="text-lg text-gray-700">
+                Explore the beauty of Kerala with an unforgettable 7-day adventure covering scenic backwaters, lush tea gardens, wildlife safaris, and vibrant city life.
+            </p>
+            
+            <ul class="space-y-3">
+                <li class="flex items-center">
+                    <i class="fas fa-map-marker-alt text-[#00adef] mr-3"></i> Kochi-Alappuzha-Thekkady-Munnar
+                </li>
+                <li class="flex items-center">
+                    <i class="fas fa-calendar-alt text-[#00adef] mr-3"></i> 7 Days / 6 Nights
+                </li>
+                <li class="flex items-center">
+                    <i class="fas fa-hotel text-[#00adef] mr-3"></i> Comfortable accommodations
+                </li>
+               
+                <li class="flex items-center">
+                    <i class="fas fa-ship text-[#00adef] mr-3"></i> Boating
+                </li>
+                <li class="flex items-center">
+                    <i class="fas fa-binoculars text-[#00adef] mr-3"></i> Sightseeing
+                </li>
+                <li class="flex items-center">
+                    <i class="fas fa-car-side text-[#00adef] mr-3"></i> Tour by Private Cab 
+                </li>
+                <li class="flex items-center">
+                    <i class="fas fa-clock text-[#00adef] mr-3"></i> Duration: 9 to 10 hours
+                </li>
+                <li class="flex items-center">
+                    <i class="fas fa-user-tie text-[#00adef] mr-3"></i> Guided Tour
+                </li>
+                <li class="flex items-center">
+                    <i class="fas fa-map-marker-alt text-[#00adef] mr-3"></i> Pickup & Drop
+                </li>
+            </ul>
+
+            <div class="flex justify-between items-center bg-gray-200 px-4 py-3 rounded-lg shadow-md">
+                <span class="text-gray-700"><i class="fas fa-user-friends text-[#00adef] mr-2"></i> 2 Persons</span>
+                <span class="bg-[#00adef] text-white font-semibold px-4 py-2 rounded-lg shadow-md">₹70,000</span>
+            </div>
+
+            <div class="flex space-x-4 mt-4">
+                <a href="https://wa.me/919691488797" class="flex items-center text-green-500 hover:text-green-700 border px-4 py-2 rounded-lg shadow-md">
+                    <i class="fab fa-whatsapp text-2xl mr-2"></i> WhatsApp
+                </a>
+                <a href="tel:+919691488797" class="flex items-center text-[#00adef] border px-4 py-2 rounded-lg shadow-md">
+                    <i class="fas fa-phone-alt text-2xl mr-2"></i> Call Now
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="destinations mt-32  px-8 md:px-36 w-full md:w-[70%] flex items-center justify-center flex-col md:items-center mx-auto text-center max-sm:mt-8">
+    <p class="text-2xl font-semibold text-[#00adef]">Reliable & Affordable Cabs</p>
+    <h1 class="text-4xl md:text-6xl font-bold leading-snug text-black">
+      Our Cabs
+    </h1>
+    <p class="text-lg md:text-xl text-gray-600 mt-4">
+        Travel with ease and convenience in our well-maintained cabs. Whether you're heading for a city tour or an outstation trip, our professional drivers ensure a smooth and hassle-free journey.
+    </p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex justify-center px-4">
+    <section class="container mx-auto py-12 mt-10 max-w-6xl">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        
+        <!-- Car 1 -->
+        <div class="flex flex-col sm:flex-row items-center">
+          <img src="car1.jpg" alt="Car 1" class="w-full sm:w-1/3 h-40 object-cover rounded-lg">
+          <div class="w-full sm:w-2/3 sm:pl-6 text-center sm:text-left">
+            <h3 class="text-xl sm:text-2xl font-bold text-gray-800">Toyota Innova</h3>
+            <p class="text-lg sm:text-xl text-gray-600"><i class="fas fa-users text-[#00adef] mr-2"></i> 7 Seater</p>
+            <p class="text-lg sm:text-xl text-gray-600"><i class="fas fa-tag text-[#00adef] mr-2"></i> ₹2,500 / Day</p>
+          </div>
+        </div>
+  
+        <!-- Car 2 -->
+        <div class="flex flex-col sm:flex-row items-center">
+          <img src="car2.jpg" alt="Car 2" class="w-full sm:w-1/3 h-40 object-cover rounded-lg">
+          <div class="w-full sm:w-2/3 sm:pl-6 text-center sm:text-left">
+            <h3 class="text-xl sm:text-2xl font-bold text-gray-800">Swift Dzire</h3>
+            <p class="text-lg sm:text-xl text-gray-600"><i class="fas fa-users text-[#00adef] mr-2"></i> 4 Seater</p>
+            <p class="text-lg sm:text-xl text-gray-600"><i class="fas fa-tag text-[#00adef] mr-2"></i> ₹1,800 / Day</p>
+          </div>
+        </div>
+  
+        <!-- Car 3 -->
+        <div class="flex flex-col sm:flex-row items-center">
+          <img src="car3.jpg" alt="Car 3" class="w-full sm:w-1/3 h-40 object-cover rounded-lg">
+          <div class="w-full sm:w-2/3 sm:pl-6 text-center sm:text-left">
+            <h3 class="text-xl sm:text-2xl font-bold text-gray-800">Hyundai Creta</h3>
+            <p class="text-lg sm:text-xl text-gray-600"><i class="fas fa-users text-[#00adef] mr-2"></i> 5 Seater</p>
+            <p class="text-lg sm:text-xl text-gray-600"><i class="fas fa-tag text-[#00adef] mr-2"></i> ₹2,200 / Day</p>
+          </div>
+        </div>
+  
+        <!-- Car 4 -->
+        <div class="flex flex-col sm:flex-row items-center">
+          <img src="car4.jpg" alt="Car 4" class="w-full sm:w-1/3 h-40 object-cover rounded-lg">
+          <div class="w-full sm:w-2/3 sm:pl-6 text-center sm:text-left">
+            <h3 class="text-xl sm:text-2xl font-bold text-gray-800">Ertiga</h3>
+            <p class="text-lg sm:text-xl text-gray-600"><i class="fas fa-users text-[#00adef] mr-2"></i> 6 Seater</p>
+            <p class="text-lg sm:text-xl text-gray-600"><i class="fas fa-tag text-[#00adef] mr-2"></i> ₹2,000 / Day</p>
+          </div>
+        </div>
+  
+      </div>
+    </section>
+  </div>
+  
+  
+
+  
+  <section class="bg-white py-16 px-6 sm:px-8 md:px-20 mt-20">
+    <h2 class="text-3xl sm:text-4xl font-bold text-center text-[#00adef] mb-10">What's Included & Excluded</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 max-w-5xl mx-auto">
+      <!-- Included Section -->
+      <div class="border border-[#00adef] p-6 sm:p-8 rounded-lg shadow-lg w-full">
+        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-6 text-center md:text-left">Included</h3>
+        <ul class="list-disc list-inside text-lg sm:text-xl text-gray-700 space-y-3 sm:space-y-4">
+          <li>Pick and drop</li>
+          <li>Cab for sightseeing as per the above Itinerary</li>
+          <li>Vehicle Parking Charges</li>
+          <li>Sightseeing stops</li>
+          <li>Toll & parking fees</li>
+        </ul>
+      </div>
+  
+      <!-- Excluded Section -->
+      <div class="border border-[#00adef] p-6 sm:p-8 rounded-lg shadow-lg w-full">
+        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-6 text-center md:text-left">Excluded</h3>
+        <ul class="list-disc list-inside text-lg sm:text-xl text-gray-700 space-y-3 sm:space-y-4">
+          <li>Breakfast, Lunch or any meal</li>
+          <li>Entry Ticket Fee at tourist places</li>
+          <li>Personal expenses</li>
+          <li>Lodging / Accommodation</li>
+        </ul>
+      </div>
+    </div>
+</section>
+
+
+  
+
+
+
+
+
+
+
+
+
+<div class="bg-gradient-to-r from-[#00adef] via-black to-[#464646] w-full h-auto flex flex-wrap lg:flex-nowrap gap-10 px-6 sm:px-10 py-10 items-start justify-between pt-20">
+
+    <!-- About Us Section -->
+    <div class="w-full sm:w-1/2 lg:w-1/4 h-full p-6 text-center flex flex-col items-center">
+      <h3 class="text-3xl sm:text-4xl font-bold mb-4 text-white">About Us</h3>
+      <p class="text-base sm:text-lg mb-4 text-white">Explore unforgettable destinations and seamless travel experiences with us—your perfect journey starts here!</p>
+      <div class="flex justify-center space-x-6 sm:space-x-8">
+        <a href="https://www.facebook.com/profile.php?id=61573930676651" class="text-xl sm:text-2xl text-white hover:text-[#00adef]"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/eco_tours_and_travels?igsh=MWRzaG16ZHc2YXlzZQ==" class="text-xl sm:text-2xl text-white hover:text-[#00adef]"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  
+    <!-- Quick Links Section -->
+    <div class="w-full sm:w-1/2 lg:w-1/4 h-full p-6 text-center flex flex-col items-center">
+      <h3 class="text-3xl sm:text-4xl font-bold mb-4 text-white">Quick Links</h3>
+      <ul class="text-base sm:text-lg text-white space-y-2">
+        <li><a href="#" class="hover:text-[#00adef]">Home</a></li>
+        <li><a href="#services" class="hover:text-[#00adef]">Services</a></li>
+        <li><a href="packages.html" class="hover:text-[#00adef]">Packages</a></li>
+        <li><a href="about.html" class="hover:text-[#00adef]">About</a></li>
+        <li><a href="contact.html" class="hover:text-[#00adef]">Contact Us</a></li>
+      </ul>
+    </div>
+  
+    <!-- Our Services Section -->
+    <div class="w-full sm:w-1/2 lg:w-1/4 h-full p-6 text-center flex flex-col items-center">
+      <h3 class="text-3xl sm:text-4xl font-bold mb-4 text-white">Our Services</h3>
+      <ul class="text-base sm:text-lg text-white space-y-2">
+        <li><a href="" class="hover:text-[#00adef]">Attractive Packages</a></li>
+        <li><a href="" class="hover:text-[#00adef]">Ride Reservation</a></li>
+        <li><a href="" class="hover:text-[#00adef]">Pass Reservation</a></li>
+        <li><a href="" class="hover:text-[#00adef]">Stay Arrangements</a></li>
+        <li><a href="" class="hover:text-[#00adef]">Cruise Ship</a></li>
+      </ul>
+    </div>
+  
+    <!-- Help & Contact Section -->
+    <div class="w-full sm:w-1/2 lg:w-1/4 h-full p-6 text-center flex flex-col items-center">
+      <h3 class="text-3xl sm:text-4xl font-bold mb-4 text-white">Help & Contact</h3>
+      <p class="text-base sm:text-lg mb-4 text-white">If you have any questions, feel free to contact us:</p>
+      <ul class="text-base sm:text-lg text-white space-y-2">
+        <li>Phone: <a href="tel:91 9691488797" class="text-[#00adef] hover:underline">91 9691488797</a></li>
+        <li>Email: <a href="mailto:infoecotoursandtravels@gmail.com" class="text-[#00adef] hover:underline">infoecotoursandtravels@gmail.com</a></li>
+        <li>Address: 1st Floor, Parakattu Building, Kumbalam Jn, Kochi - 682506 </li>
+      </ul>
+    </div>
+  
+  </div>
+  
+  <!-- Footer Section -->
+  <div class="w-full bg-black text-white py-4 flex flex-col justify-center items-center px-6">
+    <p class="text-base sm:text-lg">© Ecotour & Travels, All Rights Reserved.</p>
+    <p class="text-base sm:text-lg mt-2">Designed by N-me</p>
+  </div>
+  
+  <script src="./js/index.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const reveals = document.querySelectorAll(".reveal");
+    
+      function revealOnScroll() {
+        reveals.forEach((element) => {
+          const windowHeight = window.innerHeight;
+          const elementTop = element.getBoundingClientRect().top;
+          const elementVisible = 100; // Adjust threshold
+    
+          if (elementTop < windowHeight - elementVisible) {
+            element.classList.add("active");
+          } else {
+            element.classList.remove("active");
+          }
+        });
+      }
+    
+      window.addEventListener("scroll", revealOnScroll);
+      revealOnScroll(); // Run once in case elements are in view on load
+    });
+    
+  </script>
+  
+  </body>
+  </html>
+  

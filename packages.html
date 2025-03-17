@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New</title>
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
@@ -18,32 +18,37 @@
 
   <body>
 
-    
     <nav id="navbar" class="bg-transparent pt-3 pb-2 font-sans fixed w-full top-0 z-50 transition-all duration-300 ease-in-out" style="font-family: 'Liberation Sans', sans-serif;">
       <div class="container mx-auto flex items-center justify-between px-12 md:px-[6rem] sm:px-12 max-sm:px-12 max-md:px-[3rem]">
-       
         <a href="#main">
           <img id="logo-img" src="./assets/images/logo.png" alt="My Logo" class="w-[6rem] max-md:w-[5rem]">
         </a>
-        
-        
-        
     
-        
         <div class="hidden lg:flex items-center space-x-24 ml-auto">
-          <div class="space-x-10 text-xl">
-            <a href="index.html" class="text-white hover:text-[#00adef] text-[18px] ">Home</a>
+          <div class="space-x-10 text-xl relative">
+            <a href="index.html" class="text-white hover:text-[#00adef] text-[18px] active">Home</a>
             <a href="index.html#services" class="text-white hover:text-[#00adef] text-[18px]">Services</a>
-            <a href="packages.html" class="text-white hover:text-[#00adef] text-[18px]  active">Packages</a>
-            <a href="about.html" class="text-white hover:text-[#00adef] text-[18px]">About</a>  
+    
+          
+            <div class="relative inline-block">
+              <button id="dropdownButton" class="text-white hover:text-[#00adef] text-[18px] flex items-center">
+                Packages
+                <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M5.5 7.5L10 12l4.5-4.5" clip-rule="evenodd"></path>
+                </svg>
+              </button>
+              <div id="dropdownMenu" class="absolute text-[18px] left-0 mt-1 hidden bg-white shadow-md rounded-lg w-40">
+                <a href="packages.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">All</a>
+                <a href="detail1.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">1 Day</a>
+                <a href="detail2.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">7 Days</a>
+              </div>
+            </div>
+    
+            <a href="about.html" class="text-white hover:text-[#00adef] text-[18px]">About</a>
             <a href="contact.html" class="text-white hover:text-[#00adef] text-[18px]">Contact Us</a>
           </div>
-    
-         
-          
         </div>
     
-  
         <div class="lg:hidden flex items-center">
           <button id="menu-toggle" class="text-white hover:text-[#00adef] focus:outline-none">
             <i class="fas fa-bars"></i>
@@ -51,19 +56,57 @@
         </div>
       </div>
     
-    
       <div id="mobile-menu" class="lg:hidden bg-[#00adef] shadow-md p-8 space-y-6 hidden absolute w-full top-full mt-2 right-0 z-40 max-h-[80vh] overflow-y-auto">
-        <a href="index.html" class="text-white hover:text-[#00adef] block w-full text-center py-2">Home</a>
-        <a href="index.html#services" class="text-white hover:text-[#00adef] block w-full text-center py-2">Services</a>
-        <a href="packages.html" class="text-white hover:text-[#00adef] block w-full text-center py-2">Packages</a>
-        <a href="about.html" class="text-white hover:text-[#00adef] block w-full text-center py-2">About</a>  
-        <a href="contact.html" class="text-white hover:text-[#00adef] block w-full text-center py-2">Contact Us</a>
+        <a href="index.html" class="text-white hover:text-gray-200 block w-full text-center py-2">Home</a>
+        <a href="index.html#services" class="text-white hover:text-gray-200 block w-full text-center py-2">Services</a>
     
-     
-        
+        <!-- Mobile Packages Dropdown -->
+        <div class="relative">
+          <button id="mobile-dropdownButton" class="text-white hover:text-gray-200 w-full text-center py-2 flex items-center justify-center">
+            Packages
+            <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M5.5 7.5L10 12l4.5-4.5" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+          <div id="mobile-dropdownMenu" class="hidden mt-1 bg-white shadow-md rounded-lg w-full">
+            <a href="packages.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">All</a>
+            <a href="detail1.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">1 Day</a>
+            <a href="detail2.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">7 Days</a>
+          </div>
+        </div>
+    
+        <a href="about.html" class="text-white hover:text-gray-200 block w-full text-center py-2">About</a>
+        <a href="contact.html" class="text-white hover:text-gray-200 block w-full text-center py-2">Contact Us</a>
       </div>
     </nav>
-      
+    
+    <script>
+      // Toggle desktop dropdown
+      document.getElementById("dropdownButton").addEventListener("click", function() {
+        document.getElementById("dropdownMenu").classList.toggle("hidden");
+      });
+    
+      // Toggle mobile dropdown
+      document.getElementById("mobile-dropdownButton").addEventListener("click", function() {
+        document.getElementById("mobile-dropdownMenu").classList.toggle("hidden");
+      });
+    
+      // Close dropdowns if clicked outside
+      document.addEventListener("click", function(event) {
+        let dropdown = document.getElementById("dropdownMenu");
+        let mobileDropdown = document.getElementById("mobile-dropdownMenu");
+        let button = document.getElementById("dropdownButton");
+        let mobileButton = document.getElementById("mobile-dropdownButton");
+    
+        if (!button.contains(event.target) && !dropdown.contains(event.target)) {
+          dropdown.classList.add("hidden");
+        }
+        if (!mobileButton.contains(event.target) && !mobileDropdown.contains(event.target)) {
+          mobileDropdown.classList.add("hidden");
+        }
+      });
+    </script>
+    
 
 
 
@@ -87,6 +130,7 @@
     </div>
     
 </div>
+
 
 <div class="w-1/4 sm:w-1/2 md:w-1/4 h-16 mt-20  text-left max-sm:w-[60%]">
   <h1 class="bg-[#00adef] text-white py-4 px-6 text-2xl font-bold">1 Day Packages</h1>
@@ -121,14 +165,23 @@
       <hr class="my-3 border-gray-300">
 
       <ul class="text-gray-700 space-y-2 mb-4">
-          <li class="flex items-center"><i class="fas fa-utensils text-[#00adef] mr-2"></i> Food Included</li>
-          <li class="flex items-center"><i class="fas fa-binoculars text-[#00adef] mr-2"></i> Sightseeing</li>
-      </ul>
-
-      <div class="flex justify-between items-center bg-gray-200 px-4 py-2 h-16 rounded-lg mt-12">
-          <span class="text-gray-700"><i class="fas fa-user-friends text-[#00adef] mr-2"></i> 2 Persons</span>
-          <span class="bg-[#00adef] text-white font-semibold px-3 py-1 rounded-lg shadow-md">₹8,000</span>
-      </div>
+        <li class="flex items-center"><i class="fas fa-utensils text-[#00adef] mr-2"></i> Cab facilities</li>
+        <li class="flex items-center"><i class="fas fa-binoculars text-[#00adef] mr-2"></i> Sightseeing</li>
+        <li class="flex items-center"><i class="fas fa-user-tie text-[#00adef] mr-2"></i> Tour Guide</li>
+    </ul>
+    
+    <!-- View Details Button -->
+    <div class="text-left my-4 mt-10">
+        <a href="detail1.html" class="bg-[#00adef] text-white font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-[#008cba] transition duration-300">
+            View Details
+        </a>
+    </div>
+    
+    <div class="flex justify-between items-center bg-gray-200 px-4 py-2 h-16 rounded-lg mt-12">
+        <span class="text-gray-700"><i class="fas fa-user-friends text-[#00adef] mr-2"></i> 2 Persons</span>
+        <span class="bg-[#00adef] text-white font-semibold px-3 py-1 rounded-lg shadow-md">₹8,000</span>
+    </div>
+    
   </div>
 </div>
 
@@ -168,9 +221,17 @@
       <hr class="my-3 border-gray-300">
 
       <ul class="text-gray-700 space-y-2 mb-4">
-          <li class="flex items-center"><i class="fas fa-utensils text-[#00adef] mr-2"></i> Food Included</li>
+          <li class="flex items-center"><i class="fas fa-utensils text-[#00adef] mr-2"></i> Cab facilities</li>
           <li class="flex items-center"><i class="fas fa-binoculars text-[#00adef] mr-2"></i> Sightseeing</li>
+          <li class="flex items-center"><i class="fas fa-user-tie text-[#00adef] mr-2"></i> Tour Guide</li>
       </ul>
+      <!-- View Details Button -->
+    <div class="text-left my-4 mt-10">
+      <a href="detail1.html" class="bg-[#00adef] text-white font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-[#008cba] transition duration-300">
+          View Details
+      </a>
+  </div>
+  
 
       <div class="flex justify-between items-center bg-gray-200 px-4 py-2 h-16 rounded-lg mt-12">
           <span class="text-gray-700"><i class="fas fa-user-friends text-[#00adef] mr-2"></i> 2 Persons</span>
@@ -208,12 +269,20 @@
       <hr class="my-3 border-gray-300">
 
       <ul class="text-gray-700 space-y-2 mb-4">
-          <li class="flex items-center"><i class="fas fa-utensils text-[#00adef] mr-2"></i> Food Included</li>
+          <li class="flex items-center"><i class="fas fa-utensils text-[#00adef] mr-2"></i> Cab facilities</li>
           <li class="flex items-center"><i class="fas fa-ship text-[#00adef] mr-2"></i> House Boat</li>
           <li class="flex items-center"><i class="fas fa-binoculars text-[#00adef] mr-2"></i> Sightseeing</li>
       </ul>
 
-      <div class="flex justify-between items-center bg-gray-200 px-4 py-2 h-16 rounded-lg">
+      <!-- View Details Button -->
+    <div class="text-left my-4 mt-10">
+      <a href="detail1.html" class="bg-[#00adef] text-white font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-[#008cba] transition duration-300">
+          View Details
+      </a>
+  </div>
+  
+
+      <div class="flex justify-between items-center bg-gray-200 px-4 py-2 h-16 rounded-lg mt-12">
           <span class="text-gray-700"><i class="fas fa-user-friends text-[#00adef] mr-2"></i> 2 Persons</span>
           <span class="bg-[#00adef] text-white font-semibold px-3 py-1 rounded-lg shadow-md">₹12,000</span>
       </div>
@@ -265,7 +334,10 @@
               <li class="flex items-center"><i class="fas fa-utensils text-[#00adef] mr-2"></i> Food included</li>
               <li class="flex items-center"><i class="fas fa-ship text-[#00adef] mr-2"></i> Boating</li>
           </ul>
-          <button class="mt-3 bg-[#00adef] text-white px-4 py-2 rounded-lg shadow-md w-full md:w-auto" onclick="openModal4()">View Details</button>
+          <button class="mt-3 bg-[#00adef] text-white px-4 py-2 rounded-lg shadow-md w-full md:w-auto" onclick="window.location.href='detail2.html'">
+            View Details
+        </button>
+        
       </div>
       
       <div class="flex flex-col md:flex-row justify-between items-center bg-gray-200 px-4 py-2 h-auto md:h-16 rounded-lg mt-3">
@@ -275,51 +347,6 @@
   </div>
 </div>
 
-<!-- Modal 4 -->
-<div id="modal4" class="fixed inset-0 backdrop-blur-md flex justify-center items-center z-50 hidden p-4">
-  <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-lg md:w-1/2 relative">
-      <h2 class="text-xl md:text-2xl font-semibold text-gray-800 mb-4">Trip Details</h2>
-      
-      <div class="mt-4 text-gray-700 text-sm md:text-lg">
-          <h4 class="text-lg md:text-2xl font-semibold text-gray-800">Itinerary Highlights</h4>
-          <ul class="mt-3 space-y-2">
-              <li><i class="fas fa-map-pin text-[#00adef] mr-3"></i> Day 1: Arrival in Kochi & Sightseeing</li>
-              <li><i class="fas fa-map-pin text-[#00adef] mr-3"></i> Day 2: Backwater Cruise in Alappuzha</li>
-              <li><i class="fas fa-map-pin text-[#00adef] mr-3"></i> Day 3: Thekkady Wildlife Safari</li>
-              <li><i class="fas fa-map-pin text-[#00adef] mr-3"></i> Day 4-5: Munnar Hill Station Tour</li>
-              <li><i class="fas fa-map-pin text-[#00adef] mr-3"></i> Day 6: Leisure & Shopping</li>
-              <li><i class="fas fa-map-pin text-[#00adef] mr-3"></i> Day 7: Departure</li>
-          </ul>
-      </div>
-
-      <div class="mt-4">
-          <h5 class="text-lg md:text-xl font-semibold text-[#00adef]">Facilities Available in Kerala Tour Package:</h5>
-          <ul class="text-gray-700 text-sm md:text-lg space-y-2 mt-3">
-              <li><i class="fas fa-check-circle text-[#00adef] mr-3"></i> Comfortable Hotel/Resort Stay with Modern Amenities</li>
-              <li><i class="fas fa-check-circle text-[#00adef] mr-3"></i> Daily Breakfast & Dinner at Premium Locations</li>
-              <li><i class="fas fa-check-circle text-[#00adef] mr-3"></i> Private Cab for Local Sightseeing & Transfers</li>
-              <li><i class="fas fa-check-circle text-[#00adef] mr-3"></i> Houseboat Stay with Full Meal Service in Alappuzha</li>
-              <li><i class="fas fa-check-circle text-[#00adef] mr-3"></i> Visit to Tea Plantations & Spice Gardens</li>
-              <li><i class="fas fa-check-circle text-[#00adef] mr-3"></i> Guided Wildlife Safari in Thekkady</li>
-              <li><i class="fas fa-check-circle text-[#00adef] mr-3"></i> Relaxing Leisure Days and Shopping Time</li>
-          </ul>
-      </div>
-
-      <!-- Close Button -->
-      <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-2xl" onclick="closeModal4()">&times;</button>
-  </div>
-</div>
-
-<!-- JavaScript for Modal 4 -->
-<script>
-function openModal4() {
-document.getElementById("modal4").classList.remove("hidden");
-}
-
-function closeModal4() {
-document.getElementById("modal4").classList.add("hidden");
-}
-</script>
 
 
 
