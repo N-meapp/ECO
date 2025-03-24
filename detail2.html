@@ -21,17 +21,18 @@
     
     <nav id="navbar" class="bg-transparent pt-3 pb-2 font-sans fixed w-full top-0 z-50 transition-all duration-300 ease-in-out" style="font-family: 'Liberation Sans', sans-serif;">
         <div class="container mx-auto flex items-center justify-between px-12 md:px-[6rem] sm:px-12 max-sm:px-12 max-md:px-[3rem]">
-          <a href="#main">
+          <a href="index.html">
             <img id="logo-img" src="./assets/images/logo.png" alt="My Logo" class="w-[6rem] max-md:w-[5rem]">
           </a>
       
           <div class="hidden lg:flex items-center space-x-24 ml-auto">
             <div class="space-x-10 text-xl relative">
-              <a href="index.html" class="text-white hover:text-[#00adef] text-[18px] active">Home</a>
+              <a href="index.html" class="text-white hover:text-[#00adef] text-[18px] ">Home</a>
               <a href="index.html#services" class="text-white hover:text-[#00adef] text-[18px]">Services</a>
+              <a href="packages.html" class="text-white hover:text-[#00adef] text-[18px] active">Packages</a>
       
             
-              <div class="relative inline-block">
+              <!-- <div class="relative inline-block">
                 <button id="dropdownButton" class="text-white hover:text-[#00adef] text-[18px] flex items-center">
                   Packages
                   <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
@@ -43,7 +44,7 @@
                   <a href="detail1.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">1 Day</a>
                   <a href="detail2.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">7 Days</a>
                 </div>
-              </div>
+              </div> -->
       
               <a href="about.html" class="text-white hover:text-[#00adef] text-[18px]">About</a>
               <a href="contact.html" class="text-white hover:text-[#00adef] text-[18px]">Contact Us</a>
@@ -81,32 +82,7 @@
         </div>
       </nav>
       
-      <script>
-        // Toggle desktop dropdown
-        document.getElementById("dropdownButton").addEventListener("click", function() {
-          document.getElementById("dropdownMenu").classList.toggle("hidden");
-        });
-      
-        // Toggle mobile dropdown
-        document.getElementById("mobile-dropdownButton").addEventListener("click", function() {
-          document.getElementById("mobile-dropdownMenu").classList.toggle("hidden");
-        });
-      
-        // Close dropdowns if clicked outside
-        document.addEventListener("click", function(event) {
-          let dropdown = document.getElementById("dropdownMenu");
-          let mobileDropdown = document.getElementById("mobile-dropdownMenu");
-          let button = document.getElementById("dropdownButton");
-          let mobileButton = document.getElementById("mobile-dropdownButton");
-      
-          if (!button.contains(event.target) && !dropdown.contains(event.target)) {
-            dropdown.classList.add("hidden");
-          }
-          if (!mobileButton.contains(event.target) && !mobileDropdown.contains(event.target)) {
-            mobileDropdown.classList.add("hidden");
-          }
-        });
-      </script>
+     
       
 
 
@@ -195,9 +171,7 @@
                 <li class="flex items-center">
                     <i class="fas fa-car-side text-[#00adef] mr-3"></i> Tour by Private Cab 
                 </li>
-                <li class="flex items-center">
-                    <i class="fas fa-clock text-[#00adef] mr-3"></i> Duration: 9 to 10 hours
-                </li>
+                
                 <li class="flex items-center">
                     <i class="fas fa-user-tie text-[#00adef] mr-3"></i> Guided Tour
                 </li>
@@ -245,83 +219,106 @@
 
 
 <div class="flex justify-center px-4">
-    <section class="container mx-auto py-12 mt-10 max-w-6xl">
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        
-        <!-- Car 1 -->
-        <div class="flex flex-col sm:flex-row items-center">
-          <img src="car1.jpg" alt="Car 1" class="w-full sm:w-1/3 h-40 object-cover rounded-lg">
-          <div class="w-full sm:w-2/3 sm:pl-6 text-center sm:text-left">
-            <h3 class="text-xl sm:text-2xl font-bold text-gray-800">Toyota Innova</h3>
-            <p class="text-lg sm:text-xl text-gray-600"><i class="fas fa-users text-[#00adef] mr-2"></i> 7 Seater</p>
-            <p class="text-lg sm:text-xl text-gray-600"><i class="fas fa-tag text-[#00adef] mr-2"></i> ₹2,500 / Day</p>
-          </div>
+  <section class="container mx-auto py-12 mt-10 max-w-6xl">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      
+      <!-- Car 1 -->
+      <div class="flex flex-col sm:flex-row items-center">
+        <img src="./assets/images/urbania.png" alt="Car 1" class="w-full sm:w-1/2 h-40 object-cover rounded-lg">
+        <div class="w-full sm:w-2/3 sm:pl-6 text-center sm:text-left">
+          <h3 class="text-xl sm:text-2xl font-bold text-gray-800">Urbania</h3>
+          <p class="text-lg sm:text-xl text-gray-600"><i class="fas fa-users text-sm text-[#00adef] mr-2"></i>  7-8  Seater</p>
+          <p class="text-lg sm:text-xl text-gray-600"><i class="fas fa-tag  text-sm text-[#00adef] mr-2"></i> ₹7200 for 100 km</p>
+          <p class="text-lg sm:text-xl text-gray-600"><i class="fas fa-tag  text-sm text-[#00adef] mr-2"></i> ₹30 for extra km</p>
         </div>
-  
-        <!-- Car 2 -->
-        <div class="flex flex-col sm:flex-row items-center">
-          <img src="car2.jpg" alt="Car 2" class="w-full sm:w-1/3 h-40 object-cover rounded-lg">
-          <div class="w-full sm:w-2/3 sm:pl-6 text-center sm:text-left">
-            <h3 class="text-xl sm:text-2xl font-bold text-gray-800">Swift Dzire</h3>
-            <p class="text-lg sm:text-xl text-gray-600"><i class="fas fa-users text-[#00adef] mr-2"></i> 4 Seater</p>
-            <p class="text-lg sm:text-xl text-gray-600"><i class="fas fa-tag text-[#00adef] mr-2"></i> ₹1,800 / Day</p>
-          </div>
-        </div>
-  
-        <!-- Car 3 -->
-        <div class="flex flex-col sm:flex-row items-center">
-          <img src="car3.jpg" alt="Car 3" class="w-full sm:w-1/3 h-40 object-cover rounded-lg">
-          <div class="w-full sm:w-2/3 sm:pl-6 text-center sm:text-left">
-            <h3 class="text-xl sm:text-2xl font-bold text-gray-800">Hyundai Creta</h3>
-            <p class="text-lg sm:text-xl text-gray-600"><i class="fas fa-users text-[#00adef] mr-2"></i> 5 Seater</p>
-            <p class="text-lg sm:text-xl text-gray-600"><i class="fas fa-tag text-[#00adef] mr-2"></i> ₹2,200 / Day</p>
-          </div>
-        </div>
-  
-        <!-- Car 4 -->
-        <div class="flex flex-col sm:flex-row items-center">
-          <img src="car4.jpg" alt="Car 4" class="w-full sm:w-1/3 h-40 object-cover rounded-lg">
-          <div class="w-full sm:w-2/3 sm:pl-6 text-center sm:text-left">
-            <h3 class="text-xl sm:text-2xl font-bold text-gray-800">Ertiga</h3>
-            <p class="text-lg sm:text-xl text-gray-600"><i class="fas fa-users text-[#00adef] mr-2"></i> 6 Seater</p>
-            <p class="text-lg sm:text-xl text-gray-600"><i class="fas fa-tag text-[#00adef] mr-2"></i> ₹2,000 / Day</p>
-          </div>
-        </div>
-  
       </div>
-    </section>
-  </div>
-  
-  
+     
+      
+      <!-- Car 2 -->
+      <div class="flex flex-col sm:flex-row items-center">
+        <img src="./assets/images/crysta.png" alt="Car 1" class="w-full sm:w-1/2 h-40 object-cover rounded-lg">
+        <div class="w-full sm:w-2/3 sm:pl-6 text-center sm:text-left">
+          <h3 class="text-xl sm:text-2xl font-bold text-gray-800">Crista</h3>
+          <p class="text-lg sm:text-xl text-gray-600"><i class="fas fa-users text-sm text-[#00adef] mr-2"></i> 5 Seater</p>
+          <p class="text-lg sm:text-xl text-gray-600"><i class="fas fa-tag  text-sm text-[#00adef] mr-2"></i> ₹3500 for 100 km</p>
+          <p class="text-lg sm:text-xl text-gray-600"><i class="fas fa-tag  text-sm text-[#00adef] mr-2"></i> ₹23 for extra km</p>
+        </div>
+      </div>
 
-  
-  <section class="bg-white py-16 px-6 sm:px-8 md:px-20 mt-20">
-    <h2 class="text-3xl sm:text-4xl font-bold text-center text-[#00adef] mb-10">What's Included & Excluded</h2>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 max-w-5xl mx-auto">
-      <!-- Included Section -->
-      <div class="border border-[#00adef] p-6 sm:p-8 rounded-lg shadow-lg w-full">
-        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-6 text-center md:text-left">Included</h3>
-        <ul class="list-disc list-inside text-lg sm:text-xl text-gray-700 space-y-3 sm:space-y-4">
-          <li>Pick and drop</li>
-          <li>Cab for sightseeing as per the above Itinerary</li>
-          <li>Vehicle Parking Charges</li>
-          <li>Sightseeing stops</li>
-          <li>Toll & parking fees</li>
-        </ul>
+      <!-- Car 3 -->
+      <div class="flex flex-col sm:flex-row items-center">
+        <img src="./assets/images/innova.png" alt="Car 1" class="w-full sm:w-1/2 h-40 object-cover rounded-lg">
+        <div class="w-full sm:w-2/3 sm:pl-6 text-center sm:text-left">
+          <h3 class="text-xl sm:text-2xl font-bold text-gray-800">Innova</h3>
+          <p class="text-lg sm:text-xl text-gray-600"><i class="fas fa-users text-sm text-[#00adef] mr-2"></i> 7-8 Seater</p>
+          <p class="text-lg sm:text-xl text-gray-600"><i class="fas fa-tag  text-sm text-[#00adef] mr-2"></i> ₹2700 for 100 km</p>
+          <p class="text-lg sm:text-xl text-gray-600"><i class="fas fa-tag  text-sm text-[#00adef] mr-2"></i> ₹22 for extra km</p>
+        </div>
       </div>
-  
-      <!-- Excluded Section -->
-      <div class="border border-[#00adef] p-6 sm:p-8 rounded-lg shadow-lg w-full">
-        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-6 text-center md:text-left">Excluded</h3>
-        <ul class="list-disc list-inside text-lg sm:text-xl text-gray-700 space-y-3 sm:space-y-4">
-          <li>Breakfast, Lunch or any meal</li>
-          <li>Entry Ticket Fee at tourist places</li>
-          <li>Personal expenses</li>
-          <li>Lodging / Accommodation</li>
-        </ul>
+
+      <!-- Car 4 -->
+      <div class="flex flex-col sm:flex-row items-center">
+        <img src="./assets/images/ertiga.png" alt="Car 1" class="w-full sm:w-1/2 h-40 object-cover rounded-lg">
+        <div class="w-full sm:w-2/3 sm:pl-6 text-center sm:text-left">
+          <h3 class="text-xl sm:text-2xl font-bold text-gray-800">Ertiga</h3>
+          <p class="text-lg sm:text-xl text-gray-600"><i class="fas fa-users text-sm text-[#00adef] mr-2"></i> 7 Seater</p>
+          <p class="text-lg sm:text-xl text-gray-600"><i class="fas fa-tag  text-sm text-[#00adef] mr-2"></i> ₹2,500 for 100 km</p>
+          <p class="text-lg sm:text-xl text-gray-600"><i class="fas fa-tag  text-sm text-[#00adef] mr-2"></i> ₹15 for extra km</p>
+        </div>
       </div>
+
+      <div class="flex flex-col sm:flex-row items-center">
+        <img src="./assets/images/sedan.jpg" alt="Car 1" class="w-full sm:w-1/2 h-40 object-cover rounded-lg">
+        <div class="w-full sm:w-2/3 sm:pl-6 text-center sm:text-left">
+          <h3 class="text-xl sm:text-2xl font-bold text-gray-800">Sedan / Desire</h3>
+          <p class="text-lg sm:text-xl text-gray-600"><i class="fas fa-users text-sm text-[#00adef] mr-2"></i> 5 Seater</p>
+          <p class="text-lg sm:text-xl text-gray-600"><i class="fas fa-tag  text-sm text-[#00adef] mr-2"></i> ₹2200 for 100 km</p>
+          <p class="text-lg sm:text-xl text-gray-600"><i class="fas fa-tag  text-sm text-[#00adef] mr-2"></i> ₹15 for extra km</p>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center">
+        <img src="./assets/images/byd.png" alt="Car 1" class="w-full sm:w-1/2 h-40 object-cover rounded-lg">
+        <div class="w-full sm:w-2/3 sm:pl-6 text-center sm:text-left">
+          <h3 class="text-xl sm:text-2xl font-bold text-gray-800">Byd</h3>
+          <p class="text-lg sm:text-xl text-gray-600"><i class="fas fa-users text-sm text-[#00adef] mr-2"></i> 5 Seater</p>
+          <p class="text-lg sm:text-xl text-gray-600"><i class="fas fa-tag  text-sm text-[#00adef] mr-2"></i> ₹2500  for 100 km</p>
+          <p class="text-lg sm:text-xl text-gray-600"><i class="fas fa-tag  text-sm text-[#00adef] mr-2"></i> ₹15 for extra km</p>
+        </div>
+      </div>
+
     </div>
+  </section>
+</div>
+
+
+
+
+<section class="bg-white py-16 px-6 sm:px-8 md:px-20 mt-20">
+  <h2 class="text-3xl sm:text-4xl font-bold text-center text-[#00adef] mb-10">What's Included & Excluded</h2>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 max-w-5xl mx-auto">
+    <!-- Included Section -->
+    <div class="border border-[#00adef] p-6 sm:p-8 rounded-lg shadow-lg w-full">
+      <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-6 text-center md:text-left">Included</h3>
+      <ul class="list-disc list-inside text-lg sm:text-xl text-gray-700 space-y-3 sm:space-y-4">
+        <li>Pick-up and drop-off from your hotel or home</li>
+        <li>Vehicle Parking Charges</li>
+        <li>Toll-gate charges(if applicable) </li>
+      </ul>
+    </div>
+
+    <!-- Excluded Section -->
+    <div class="border border-[#00adef] p-6 sm:p-8 rounded-lg shadow-lg w-full">
+      <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-6 text-center md:text-left">Excluded</h3>
+      <ul class="list-disc list-inside text-lg sm:text-xl text-gray-700 space-y-3 sm:space-y-4">
+        <li>Entry fees to tourist attractions</li>
+        <li>Meals (breakfast, lunch, dinner)</li>
+        <li>Accommodation</li>
+        <li>Vehicle usage beyond the specified time or route </li>
+      </ul>
+    </div>
+  </div>
 </section>
 
 
@@ -351,7 +348,7 @@
     <div class="w-full sm:w-1/2 lg:w-1/4 h-full p-6 text-center flex flex-col items-center">
       <h3 class="text-3xl sm:text-4xl font-bold mb-4 text-white">Quick Links</h3>
       <ul class="text-base sm:text-lg text-white space-y-2">
-        <li><a href="#" class="hover:text-[#00adef]">Home</a></li>
+        <li><a href="index.html" class="hover:text-[#00adef]">Home</a></li>
         <li><a href="#services" class="hover:text-[#00adef]">Services</a></li>
         <li><a href="packages.html" class="hover:text-[#00adef]">Packages</a></li>
         <li><a href="about.html" class="hover:text-[#00adef]">About</a></li>
@@ -386,8 +383,12 @@
   
   <!-- Footer Section -->
   <div class="w-full bg-black text-white py-4 flex flex-col justify-center items-center px-6">
-    <p class="text-base sm:text-lg">© Ecotour & Travels, All Rights Reserved.</p>
-    <p class="text-base sm:text-lg mt-2">Designed by N-me</p>
+    <p class="text-base sm:text-lg">© Eco tours & Travels, All Rights Reserved.</p>
+    <p class="text-base sm:text-lg mt-2">
+      Designed by 
+      <a href="https://nme360.com/" target="_blank" class="text-[#00adef] hover:underline">N-me 360</a>
+  </p>
+  
   </div>
   
   <script src="./js/index.js"></script>
@@ -414,7 +415,6 @@
     });
     
   </script>
-  
+  <script src="./js/index.js"></script>
   </body>
   </html>
-  

@@ -15,17 +15,18 @@
   <body>
     <nav id="navbar" class="bg-transparent pt-3 pb-2 font-sans fixed w-full top-0 z-50 transition-all duration-300 ease-in-out" style="font-family: 'Liberation Sans', sans-serif;">
       <div class="container mx-auto flex items-center justify-between px-12 md:px-[6rem] sm:px-12 max-sm:px-12 max-md:px-[3rem]">
-        <a href="#main">
+        <a href="index.html">
           <img id="logo-img" src="./assets/images/logo.png" alt="My Logo" class="w-[6rem] max-md:w-[5rem]">
         </a>
     
         <div class="hidden lg:flex items-center space-x-24 ml-auto">
           <div class="space-x-10 text-xl relative">
-            <a href="index.html" class="text-white hover:text-[#00adef] text-[18px] active">Home</a>
+            <a href="index.html" class="text-white hover:text-[#00adef] text-[18px] ">Home</a>
             <a href="index.html#services" class="text-white hover:text-[#00adef] text-[18px]">Services</a>
+            <a href="packages.html" class="text-white hover:text-[#00adef] text-[18px]">Packages</a>
     
           
-            <div class="relative inline-block">
+            <!-- <div class="relative inline-block">
               <button id="dropdownButton" class="text-white hover:text-[#00adef] text-[18px] flex items-center">
                 Packages
                 <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
@@ -37,9 +38,9 @@
                 <a href="detail1.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">1 Day</a>
                 <a href="detail2.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">7 Days</a>
               </div>
-            </div>
+            </div> -->
     
-            <a href="about.html" class="text-white hover:text-[#00adef] text-[18px]">About</a>
+            <a href="about.html" class="text-white hover:text-[#00adef] text-[18px] active">About</a>
             <a href="contact.html" class="text-white hover:text-[#00adef] text-[18px]">Contact Us</a>
           </div>
         </div>
@@ -70,37 +71,12 @@
           </div>
         </div>
     
-        <a href="about.html" class="text-white hover:text-gray-200 block w-full text-center py-2">About</a>
+        <a href="about.html" class="text-white hover:text-gray-200 block w-full text-center py-2 ">About</a>
         <a href="contact.html" class="text-white hover:text-gray-200 block w-full text-center py-2">Contact Us</a>
       </div>
     </nav>
     
-    <script>
-      // Toggle desktop dropdown
-      document.getElementById("dropdownButton").addEventListener("click", function() {
-        document.getElementById("dropdownMenu").classList.toggle("hidden");
-      });
-    
-      // Toggle mobile dropdown
-      document.getElementById("mobile-dropdownButton").addEventListener("click", function() {
-        document.getElementById("mobile-dropdownMenu").classList.toggle("hidden");
-      });
-    
-      // Close dropdowns if clicked outside
-      document.addEventListener("click", function(event) {
-        let dropdown = document.getElementById("dropdownMenu");
-        let mobileDropdown = document.getElementById("mobile-dropdownMenu");
-        let button = document.getElementById("dropdownButton");
-        let mobileButton = document.getElementById("mobile-dropdownButton");
-    
-        if (!button.contains(event.target) && !dropdown.contains(event.target)) {
-          dropdown.classList.add("hidden");
-        }
-        if (!mobileButton.contains(event.target) && !mobileDropdown.contains(event.target)) {
-          mobileDropdown.classList.add("hidden");
-        }
-      });
-    </script>
+  
     
 
 
@@ -276,7 +252,7 @@
   <div class="w-full sm:w-1/2 lg:w-1/4 h-full p-6 text-center flex flex-col items-center">
     <h3 class="text-3xl sm:text-4xl font-bold mb-4 text-white">Quick Links</h3>
     <ul class="text-base sm:text-lg text-white space-y-2">
-      <li><a href="#" class="hover:text-[#00adef]">Home</a></li>
+      <li><a href="index.html" class="hover:text-[#00adef]">Home</a></li>
       <li><a href="#services" class="hover:text-[#00adef]">Services</a></li>
       <li><a href="packages.html" class="hover:text-[#00adef]">Packages</a></li>
       <li><a href="about.html" class="hover:text-[#00adef]">About</a></li>
@@ -311,8 +287,12 @@
 
 <!-- Footer Section -->
 <div class="w-full bg-black text-white py-4 flex flex-col justify-center items-center px-6">
-  <p class="text-base sm:text-lg">© Ecotour & Travels, All Rights Reserved.</p>
-  <p class="text-base sm:text-lg mt-2">Designed by N-me</p>
+  <p class="text-base sm:text-lg">© Eco tours & Travels, All Rights Reserved.</p>
+  <p class="text-base sm:text-lg mt-2">
+    Designed by 
+    <a href="https://nme360.com/" target="_blank" class="text-[#00adef] hover:underline">N-me 360</a>
+</p>
+
 </div>
 
 

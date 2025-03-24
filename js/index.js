@@ -1,58 +1,53 @@
-const menuToggle = document.getElementById('menu-toggle');
-const mobileMenu = document.getElementById('mobile-menu');
-const menuLinks = mobileMenu.querySelectorAll('a');
-const logo = document.getElementById('logo-img');
-const navbar = document.getElementById('navbar');
+document.addEventListener("DOMContentLoaded", function() {
+  console.log("DOM fully loaded");
 
-menuToggle.addEventListener('click', function(event) {
-  mobileMenu.classList.toggle('hidden'); 
-});
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const logo = document.getElementById('logo-img');
+  const navbar = document.getElementById('navbar');
 
-document.addEventListener('click', function(event) {
-  if (!menuToggle.contains(event.target) && !mobileMenu.contains(event.target)) {
-    mobileMenu.classList.add('hidden'); 
+  if (!menuToggle || !mobileMenu || !logo || !navbar) {
+      console.error("One or more elements are missing!");
+      return; // Stop execution if elements are missing
   }
-});
 
-mobileMenu.addEventListener('click', function(event) {
-  event.stopPropagation();
-});
-
-menuLinks.forEach(link => {
-  link.addEventListener('click', function() {
-    mobileMenu.classList.add('hidden'); 
+  menuToggle.addEventListener('click', function(event) {
+      mobileMenu.classList.toggle('hidden'); 
   });
+
+  document.addEventListener('click', function(event) {
+      if (!menuToggle.contains(event.target) && !mobileMenu.contains(event.target)) {
+          mobileMenu.classList.add('hidden'); 
+      }
+  });
+
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 50) {
+        navbar.classList.remove('bg-transparent');
+        navbar.classList.add('bg-white'); // Change this if you want another color
+        logo.src = "./assets/images/logo2.png";
+        menuToggle.classList.add('text-black');
+        menuToggle.classList.remove('text-white');
+
+        navbar.querySelectorAll('a').forEach(link => {
+            link.classList.add('text-black');
+            link.classList.remove('text-white');
+        });
+    } else {
+        navbar.classList.add('bg-transparent');
+        navbar.classList.remove('bg-white');
+        logo.src = "./assets/images/logo.png"; // Change back to original logo
+        menuToggle.classList.add('text-white');
+        menuToggle.classList.remove('text-black');
+
+        navbar.querySelectorAll('a').forEach(link => {
+            link.classList.add('text-white');
+            link.classList.remove('text-black');
+        });
+    }
 });
 
-window.addEventListener('scroll', function () {
-  const links = navbar.querySelectorAll('a');
-  const dropdownButton = document.getElementById('dropdownButton'); // Packages button
-  const dropdownMenu = document.getElementById('dropdownMenu'); // Dropdown menu
-  const dropdownLinks = dropdownMenu.querySelectorAll('a'); // Dropdown options
-
-  if (window.scrollY > 50) {
-    navbar.classList.add('scrolled');
-    navbar.classList.remove('bg-transparent');
-    logo.src = "./assets/images/logo2.png"; // Change logo on scroll
-    menuToggle.classList.add('text-black');
-    menuToggle.classList.remove('text-white');
-
-    links.forEach(link => {
-      link.classList.add('text-black');
-      link.classList.remove('text-white');
-    });
-
-    // Ensure Packages button and dropdown links turn black
-    dropdownButton.classList.add('text-black');
-    dropdownButton.classList.remove('text-white');
-
-    dropdownLinks.forEach(link => {
-      link.classList.add('text-black');
-      link.classList.remove('text-white');
-    });
-  } 
 });
-
 
 
 
@@ -184,39 +179,37 @@ window.addEventListener('scroll', function () {
 
   document.addEventListener("DOMContentLoaded", function () {
     function toggleList(clickedCard) {
-        if (window.innerWidth <= 768) { // Enable click-based toggling only on small screens
-            document.querySelectorAll(".card ul").forEach((list) => {
-                if (list !== clickedCard.querySelector("ul")) {
-                    list.classList.add("hidden");
-                    list.classList.remove("opacity-100");
-                }
-            });
+        // Hide all other lists except the clicked one
+        document.querySelectorAll(".card ul").forEach((list) => {
+            if (list !== clickedCard.querySelector("ul")) {
+                list.classList.add("hidden");
+                list.classList.remove("opacity-100");
+            }
+        });
 
-            let list = clickedCard.querySelector("ul");
-            list.classList.toggle("hidden");
-            list.classList.toggle("opacity-100");
-        }
+        // Toggle visibility of the clicked card's list
+        let list = clickedCard.querySelector("ul");
+        list.classList.toggle("hidden");
+        list.classList.toggle("opacity-100");
     }
 
     document.querySelectorAll(".card").forEach((card) => {
         card.addEventListener("click", function (event) {
-            if (window.innerWidth <= 768) { // Apply click only for mobile view
-                event.stopPropagation(); 
-                toggleList(this);
-            }
+            event.stopPropagation(); 
+            toggleList(this);
         });
     });
 
-    // Click outside to close all lists (only in mobile view)
+    // Click outside to close all lists
     document.addEventListener("click", function () {
-        if (window.innerWidth <= 768) {
-            document.querySelectorAll(".card ul").forEach((list) => {
-                list.classList.add("hidden");
-                list.classList.remove("opacity-100");
-            });
-        }
+        document.querySelectorAll(".card ul").forEach((list) => {
+            list.classList.add("hidden");
+            list.classList.remove("opacity-100");
+        });
     });
 });
+
+
 
   
 
@@ -268,8 +261,6 @@ option2.addEventListener("click", () => {
   option1.classList.add("bg-transparent", "text-white");
   option1.classList.remove("bg-white", "text-black");
 });
-
-
 
 
 

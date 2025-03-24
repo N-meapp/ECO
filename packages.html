@@ -20,17 +20,18 @@
 
     <nav id="navbar" class="bg-transparent pt-3 pb-2 font-sans fixed w-full top-0 z-50 transition-all duration-300 ease-in-out" style="font-family: 'Liberation Sans', sans-serif;">
       <div class="container mx-auto flex items-center justify-between px-12 md:px-[6rem] sm:px-12 max-sm:px-12 max-md:px-[3rem]">
-        <a href="#main">
+        <a href="index.html">
           <img id="logo-img" src="./assets/images/logo.png" alt="My Logo" class="w-[6rem] max-md:w-[5rem]">
         </a>
     
         <div class="hidden lg:flex items-center space-x-24 ml-auto">
           <div class="space-x-10 text-xl relative">
-            <a href="index.html" class="text-white hover:text-[#00adef] text-[18px] active">Home</a>
+            <a href="index.html" class="text-white hover:text-[#00adef] text-[18px]">Home</a>
             <a href="index.html#services" class="text-white hover:text-[#00adef] text-[18px]">Services</a>
+            <a href="packages.html" class="text-white hover:text-[#00adef] text-[18px] active">Packages</a>
     
           
-            <div class="relative inline-block">
+            <!-- <div class="relative inline-block">
               <button id="dropdownButton" class="text-white hover:text-[#00adef] text-[18px] flex items-center">
                 Packages
                 <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
@@ -42,7 +43,7 @@
                 <a href="detail1.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">1 Day</a>
                 <a href="detail2.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">7 Days</a>
               </div>
-            </div>
+            </div> -->
     
             <a href="about.html" class="text-white hover:text-[#00adef] text-[18px]">About</a>
             <a href="contact.html" class="text-white hover:text-[#00adef] text-[18px]">Contact Us</a>
@@ -80,32 +81,7 @@
       </div>
     </nav>
     
-    <script>
-      // Toggle desktop dropdown
-      document.getElementById("dropdownButton").addEventListener("click", function() {
-        document.getElementById("dropdownMenu").classList.toggle("hidden");
-      });
-    
-      // Toggle mobile dropdown
-      document.getElementById("mobile-dropdownButton").addEventListener("click", function() {
-        document.getElementById("mobile-dropdownMenu").classList.toggle("hidden");
-      });
-    
-      // Close dropdowns if clicked outside
-      document.addEventListener("click", function(event) {
-        let dropdown = document.getElementById("dropdownMenu");
-        let mobileDropdown = document.getElementById("mobile-dropdownMenu");
-        let button = document.getElementById("dropdownButton");
-        let mobileButton = document.getElementById("mobile-dropdownButton");
-    
-        if (!button.contains(event.target) && !dropdown.contains(event.target)) {
-          dropdown.classList.add("hidden");
-        }
-        if (!mobileButton.contains(event.target) && !mobileDropdown.contains(event.target)) {
-          mobileDropdown.classList.add("hidden");
-        }
-      });
-    </script>
+   
     
 
 
@@ -131,8 +107,10 @@
     
 </div>
 
-
-<div class="w-1/4 sm:w-1/2 md:w-1/4 h-16 mt-20  text-left max-sm:w-[60%]">
+<div id="packages">
+  </div>
+</div>
+<div class=" w-1/4 sm:w-1/2 md:w-1/4 h-16 mt-20  text-left max-sm:w-[60%]" >
   <h1 class="bg-[#00adef] text-white py-4 px-6 text-2xl font-bold">1 Day Packages</h1>
 </div>
 
@@ -472,7 +450,7 @@
         <div class="relative bg-white p-5 xl:p-6 rounded-lg shadow-lg flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6 z-10 lg:w-[39rem]">
 
           <!-- Navigation Button -->
-          <a href="contact.html" class="bg-[#00adef] text-white py-3 px-6 rounded-full hover:bg-blue-400 transition-all duration-300">
+          <a href="contact.html" class="bg-[#00adef] text-white py-3 px-6 rounded-full hover:bg-[#00adef] transition-all duration-300">
             Contact Us
           </a>
 
@@ -547,7 +525,7 @@
   <div class="w-full sm:w-1/2 lg:w-1/4 h-full p-6 text-center flex flex-col items-center">
     <h3 class="text-3xl sm:text-4xl font-bold mb-4 text-white">Quick Links</h3>
     <ul class="text-base sm:text-lg text-white space-y-2">
-      <li><a href="#" class="hover:text-[#00adef]">Home</a></li>
+      <li><a href="index.html" class="hover:text-[#00adef]">Home</a></li>
       <li><a href="#services" class="hover:text-[#00adef]">Services</a></li>
       <li><a href="packages.html" class="hover:text-[#00adef]">Packages</a></li>
       <li><a href="about.html" class="hover:text-[#00adef]">About</a></li>
@@ -582,8 +560,12 @@
 
 <!-- Footer Section -->
 <div class="w-full bg-black text-white py-4 flex flex-col justify-center items-center px-6">
-  <p class="text-base sm:text-lg">© Ecotour & Travels, All Rights Reserved.</p>
-  <p class="text-base sm:text-lg mt-2">Designed by N-me</p>
+  <p class="text-base sm:text-lg">© Eco tours & Travels, All Rights Reserved.</p>
+  <p class="text-base sm:text-lg mt-2">
+    Designed by 
+    <a href="https://nme360.com/" target="_blank" class="text-[#00adef] hover:underline">N-me 360</a>
+</p>
+
 </div>
 
 <script src="./js/index.js"></script>

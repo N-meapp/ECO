@@ -21,7 +21,7 @@
 
     <nav id="navbar" class="bg-transparent pt-3 pb-2 font-sans fixed w-full top-0 z-50 transition-all duration-300 ease-in-out" style="font-family: 'Liberation Sans', sans-serif;">
       <div class="container mx-auto flex items-center justify-between px-12 md:px-[6rem] sm:px-12 max-sm:px-12 max-md:px-[3rem]">
-        <a href="#main">
+        <a href="index.html">
           <img id="logo-img" src="./assets/images/logo.png" alt="My Logo" class="w-[6rem] max-md:w-[5rem]">
         </a>
     
@@ -29,9 +29,10 @@
           <div class="space-x-10 text-xl relative">
             <a href="index.html" class="text-white hover:text-[#00adef] text-[18px] active">Home</a>
             <a href="index.html#services" class="text-white hover:text-[#00adef] text-[18px]">Services</a>
+            <a href="packages.html" class="text-white hover:text-[#00adef] text-[18px]">Packages</a>
     
           
-            <div class="relative inline-block">
+            <!-- <div class="relative inline-block">
               <button id="dropdownButton" class="text-white hover:text-[#00adef] text-[18px] flex items-center">
                 Packages
                 <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
@@ -43,7 +44,7 @@
                 <a href="detail1.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">1 Day</a>
                 <a href="detail2.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">7 Days</a>
               </div>
-            </div>
+            </div> -->
     
             <a href="about.html" class="text-white hover:text-[#00adef] text-[18px]">About</a>
             <a href="contact.html" class="text-white hover:text-[#00adef] text-[18px]">Contact Us</a>
@@ -81,32 +82,7 @@
       </div>
     </nav>
     
-    <script>
-      // Toggle desktop dropdown
-      document.getElementById("dropdownButton").addEventListener("click", function() {
-        document.getElementById("dropdownMenu").classList.toggle("hidden");
-      });
-    
-      // Toggle mobile dropdown
-      document.getElementById("mobile-dropdownButton").addEventListener("click", function() {
-        document.getElementById("mobile-dropdownMenu").classList.toggle("hidden");
-      });
-    
-      // Close dropdowns if clicked outside
-      document.addEventListener("click", function(event) {
-        let dropdown = document.getElementById("dropdownMenu");
-        let mobileDropdown = document.getElementById("mobile-dropdownMenu");
-        let button = document.getElementById("dropdownButton");
-        let mobileButton = document.getElementById("mobile-dropdownButton");
-    
-        if (!button.contains(event.target) && !dropdown.contains(event.target)) {
-          dropdown.classList.add("hidden");
-        }
-        if (!mobileButton.contains(event.target) && !mobileDropdown.contains(event.target)) {
-          mobileDropdown.classList.add("hidden");
-        }
-      });
-    </script>
+ 
     
 
     <div class="relative w-full h-screen"id="main">
@@ -286,107 +262,22 @@
 
  
 </div>
-
+  
 
 
 <div class="  overflow-hidden w-screen mx-auto relative mt-20 scroll-container">
   <div class="flex gap-6 animate-scroll " id="cardContainer">
     <div class="flex gap-6 ">
       
-    
-      <div class="card w-[320px] h-[450px] relative rounded-lg overflow-hidden shadow-lg group">
-        <img src="./assets/images/kochi2.png" alt="Kochi" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-        <div class="absolute top-0 left-0 w-full bg-opacity-50 text-white p-4 text-lg font-bold z-100">Kochi</div>
-        <div class="absolute inset-0 bg-opacity-0 transition-all duration-500 group-hover:bg-opacity-50 flex items-center justify-center z-100">
-            <ul class="text-white text-lg text-left opacity-0 transition-opacity duration-500 group-hover:opacity-100 list-disc list-inside hidden md:block">
-                <li>Fort Kochi</li>
-                <li>Mattancherry Palace</li>
-                <li>Jew Town & Synagogue</li>
-                <li>Marine Drive</li>
-                <li>Chinese Fishing Nets</li>
-                <li>Bolgatty Palace</li>
-                <li>Willingdon Island</li>
-            </ul>
-        </div>
-      </div>
-
-
-      <div class="card w-[320px] h-[450px] relative rounded-lg overflow-hidden shadow-lg group">
-        <img src="./assets/images/munnar.jpg" alt="Munnar" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-        <div class="absolute top-0 left-0 w-full bg-opacity-50 text-white p-4 text-lg font-bold z-100">Munnar</div>
-        <div class="absolute inset-0 bg-opacity-0 transition-all duration-500 group-hover:bg-opacity-50 flex items-center justify-center z-100">
-            <ul class="text-white text-lg text-left opacity-0 transition-opacity duration-500 group-hover:opacity-100 list-disc list-inside hidden md:block">
-                <li>Tea Gardens</li>
-                <li>Eravikulam National Park</li>
-                <li>Mattupetty Dam</li>
-                <li>Top Station</li>
-                <li>Echo Point</li>
-                <li>Attukal Waterfalls</li>
-                <li>Kundala Lake</li>
-            </ul>
-        </div>
-    </div>
-    
-    
      
-    <div class="card w-[320px] h-[450px] relative rounded-lg overflow-hidden shadow-lg group">
-      <img src="./assets/images/alappuzha3.jpg" alt="Alappuzha" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-      <div class="absolute top-0 left-0 w-full bg-opacity-50 text-white p-4 text-lg font-bold z-100">Alappuzha</div>
-      <div class="absolute inset-0 bg-opacity-0 transition-all duration-500 group-hover:bg-opacity-50 flex items-center justify-center z-100">
-          <ul class="text-white text-lg text-left opacity-0 transition-opacity duration-500 group-hover:opacity-100 list-disc list-inside hidden md:block">
-              <li>Alappuzha Beach</li>
-              <li>Vembanad Lake</li>
-              <li>Marari Beach</li>
-              <li>Kuttanad Backwaters</li>
-              <li>Pathiramanal Island</li>
-              <li>Ambalappuzha Sree Krishna Temple</li>
-              <li>Krishnapuram Palace</li>
-          </ul>
-      </div>
-  </div>
-  
-      
-
-  <div class="card w-[320px] h-[450px] relative rounded-lg overflow-hidden shadow-lg group">
-    <img src="./assets/images/thekkadi2.jpg" alt="Thekkady" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-    <div class="absolute top-0 left-0 w-full bg-opacity-50 text-white p-4 text-lg font-bold z-100">Thekkady</div>
-    <div class="absolute inset-0 bg-opacity-0 transition-all duration-500 group-hover:bg-opacity-50 flex items-center justify-center z-100">
-      <ul class="text-white text-lg text-left opacity-0 transition-opacity duration-500 group-hover:opacity-100 list-disc list-inside hidden md:block">
-        <li>Periyar Wildlife Sanctuary</li>
-        <li>Periyar Lake</li>
-        <li>Gavi</li>
-        <li>Spice Plantations</li>
-        <li>Ramakkalmedu Viewpoint</li>
-        <li>Murikkady</li>
-        <li>Chellarkovil</li>
-      </ul>
-    </div>
-  </div>
-  
-
-
-  <div class="card w-[320px] h-[450px] relative rounded-lg overflow-hidden shadow-lg group">
-    <img src="./assets/images/kanyakumari2.jpg" alt="Kanyakumari" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-    <div class="absolute top-0 left-0 w-full bg-opacity-50 text-white p-4 text-lg font-bold z-100">Kanyakumari</div>
-    <div class="absolute inset-0 bg-opacity-0 transition-all duration-500 group-hover:bg-opacity-50 flex items-center justify-center z-100">
-      <ul class="text-white text-lg text-left opacity-0 transition-opacity duration-500 group-hover:opacity-100 list-disc list-inside hidden md:block">
-        <li>Vivekananda Rock Memorial</li>
-        <li>Thiruvalluvar Statue</li>
-        <li>Kanyakumari Beach</li>
-        <li>Sunrise & Sunset View</li>
-        <li>Bhagavathi Amman Temple</li>
-        <li>Thanumalayan Temple </li>
-        <li>Padmanabhapuram Palace</li>
-      </ul>
-    </div>
-  </div>
-  
-
-  
 <div class="card w-[320px] h-[450px] relative rounded-lg overflow-hidden shadow-lg group">
   <img src="./assets/images/kochi2.png" alt="Kochi" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-  <div class="absolute top-0 left-0 w-full bg-opacity-50 text-white p-4 text-lg font-bold z-100">Kochi</div>
-  <div class="absolute inset-0 bg-opacity-0 transition-all duration-500 group-hover:bg-opacity-50 flex items-center justify-center z-100">
+ 
+  
+  <div class="absolute top-0 left-0 w-full bg-opacity-50 text-white p-4 text-lg font-bold z-30">Kochi</div>
+
+  
+  <div class="absolute inset-0 bg-black bg-opacity-0 transition-all duration-500 group-hover:bg-opacity-50 flex items-center justify-center z-20">
       <ul class="text-white text-lg text-left opacity-0 transition-opacity duration-500 group-hover:opacity-100 list-disc list-inside hidden md:block">
           <li>Fort Kochi</li>
           <li>Mattancherry Palace</li>
@@ -399,10 +290,40 @@
   </div>
 </div>
 
+    
+
+
+<div class="card w-[320px] h-[450px] relative rounded-lg overflow-hidden shadow-lg group">
+  <img src="./assets/images/munnar.jpg" alt="Munnar" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+  
+  
+  <div class="absolute top-0 left-0 w-full bg-opacity-50 text-white p-4 text-lg font-bold z-30">Munnar</div>
+
+  
+  <div class="absolute inset-0 bg-black bg-opacity-0 transition-all duration-500 group-hover:bg-opacity-50 flex items-center justify-center z-20">
+      <ul class="text-white text-lg text-left opacity-0 transition-opacity duration-500 group-hover:opacity-100 list-disc list-inside hidden md:block">
+          <li>Tea Gardens</li>
+          <li>Eravikulam National Park</li>
+          <li>Mattupetty Dam</li>
+          <li>Top Station</li>
+          <li>Echo Point</li>
+          <li>Attukal Waterfalls</li>
+          <li>Kundala Lake</li>
+      </ul>
+  </div>
+</div>
+
+    
+    
+     
 <div class="card w-[320px] h-[450px] relative rounded-lg overflow-hidden shadow-lg group">
   <img src="./assets/images/alappuzha3.jpg" alt="Alappuzha" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-  <div class="absolute top-0 left-0 w-full bg-opacity-50 text-white p-4 text-lg font-bold z-100">Alappuzha</div>
-  <div class="absolute inset-0 bg-opacity-0 transition-all duration-500 group-hover:bg-opacity-50 flex items-center justify-center z-100">
+  
+  
+  <div class="absolute top-0 left-0 w-full bg-opacity-50 text-white p-4 text-lg font-bold z-30">Alappuzha</div>
+
+  
+  <div class="absolute inset-0 bg-black bg-opacity-0 transition-all duration-500 group-hover:bg-opacity-50 flex items-center justify-center z-20">
       <ul class="text-white text-lg text-left opacity-0 transition-opacity duration-500 group-hover:opacity-100 list-disc list-inside hidden md:block">
           <li>Alappuzha Beach</li>
           <li>Vembanad Lake</li>
@@ -419,8 +340,108 @@
 
 <div class="card w-[320px] h-[450px] relative rounded-lg overflow-hidden shadow-lg group">
   <img src="./assets/images/thekkadi2.jpg" alt="Thekkady" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-  <div class="absolute top-0 left-0 w-full bg-opacity-50 text-white p-4 text-lg font-bold z-100">Thekkady</div>
-  <div class="absolute inset-0 bg-opacity-0 transition-all duration-500 group-hover:bg-opacity-50 flex items-center justify-center z-100">
+  
+  
+  <div class="absolute top-0 left-0 w-full bg-opacity-50 text-white p-4 text-lg font-bold z-30">Thekkady</div>
+
+  
+  <div class="absolute inset-0 bg-black bg-opacity-0 transition-all duration-500 group-hover:bg-opacity-50 flex items-center justify-center z-20">
+      <ul class="text-white text-lg text-left opacity-0 transition-opacity duration-500 group-hover:opacity-100 list-disc list-inside hidden md:block">
+          <li>Periyar Wildlife Sanctuary</li>
+          <li>Periyar Lake</li>
+          <li>Gavi</li>
+          <li>Spice Plantations</li>
+          <li>Ramakkalmedu Viewpoint</li>
+          <li>Murikkady</li>
+          <li>Chellarkovil</li>
+      </ul>
+  </div>
+</div>
+
+
+
+<div class="card w-[320px] h-[450px] relative rounded-lg overflow-hidden shadow-lg group">
+  <img src="./assets/images/kanyakumari2.jpg" alt="Kanyakumari" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+  
+  
+  <div class="absolute top-0 left-0 w-full  bg-opacity-50 text-white p-4 text-lg font-bold z-30">
+      Kanyakumari
+  </div>
+
+  
+  <div class="absolute inset-0 bg-black bg-opacity-0 transition-all duration-500 group-hover:bg-opacity-50 flex items-center justify-center z-20">
+      <ul class="text-white text-lg text-left opacity-0 transition-opacity duration-500 group-hover:opacity-100 list-disc list-inside hidden md:block">
+          <li>Vivekananda Rock Memorial</li>
+          <li>Thiruvalluvar Statue</li>
+          <li>Kanyakumari Beach</li>
+          <li>Sunrise & Sunset View</li>
+          <li>Bhagavathi Amman Temple</li>
+          <li>Thanumalayan Temple</li>
+          <li>Padmanabhapuram Palace</li>
+      </ul>
+  </div>
+</div>
+
+  
+
+  
+<div class="card w-[320px] h-[450px] relative rounded-lg overflow-hidden shadow-lg group">
+  <img src="./assets/images/kochi2.png" alt="Kochi" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+  
+  
+  <div class="absolute top-0 left-0 w-full  bg-opacity-50 text-white p-4 text-lg font-bold z-30">
+      Kochi
+  </div>
+
+  
+  <div class="absolute inset-0 bg-black bg-opacity-0 transition-all duration-500 group-hover:bg-opacity-50 flex items-center justify-center z-20">
+      <ul class="text-white text-lg text-left opacity-0 transition-opacity duration-500 group-hover:opacity-100 list-disc list-inside hidden md:block">
+          <li>Fort Kochi</li>
+          <li>Mattancherry Palace</li>
+          <li>Jew Town & Synagogue</li>
+          <li>Marine Drive</li>
+          <li>Chinese Fishing Nets</li>
+          <li>Bolgatty Palace</li>
+          <li>Willingdon Island</li>
+      </ul>
+  </div>
+</div>
+
+
+<div class="card w-[320px] h-[450px] relative rounded-lg overflow-hidden shadow-lg group">
+  <img src="./assets/images/alappuzha3.jpg" alt="Alappuzha" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+  
+  
+  <div class="absolute top-0 left-0 w-full  bg-opacity-50 text-white p-4 text-lg font-bold z-30">
+      Alappuzha
+  </div>
+
+  
+  <div class="absolute inset-0 bg-black bg-opacity-0 transition-all duration-500 group-hover:bg-opacity-50 flex items-center justify-center z-20">
+      <ul class="text-white text-lg text-left opacity-0 transition-opacity duration-500 group-hover:opacity-100 list-disc list-inside hidden md:block">
+          <li>Alappuzha Beach</li>
+          <li>Vembanad Lake</li>
+          <li>Marari Beach</li>
+          <li>Kuttanad Backwaters</li>
+          <li>Pathiramanal Island</li>
+          <li>Ambalappuzha Sree Krishna Temple</li>
+          <li>Krishnapuram Palace</li>
+      </ul>
+  </div>
+</div>
+
+
+      
+
+<div class="card w-[320px] h-[450px] relative rounded-lg overflow-hidden shadow-lg group">
+  <img src="./assets/images/thekkadi2.jpg" alt="Thekkady" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+  
+  
+  <div class="absolute top-0 left-0 w-full  bg-opacity-50 text-white p-4 text-lg font-bold z-30">
+      Thekkady
+  </div>
+  
+  <div class="absolute inset-0 bg-black bg-opacity-0 transition-all duration-500 group-hover:bg-opacity-50 flex items-center justify-center z-20">
     <ul class="text-white text-lg text-left opacity-0 transition-opacity duration-500 group-hover:opacity-100 list-disc list-inside hidden md:block">
       <li>Periyar Wildlife Sanctuary</li>
       <li>Periyar Lake</li>
@@ -436,19 +457,26 @@
 
 <div class="card w-[320px] h-[450px] relative rounded-lg overflow-hidden shadow-lg group">
   <img src="./assets/images/kanyakumari2.jpg" alt="Kanyakumari" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-  <div class="absolute top-0 left-0 w-full bg-opacity-50 text-white p-4 text-lg font-bold z-100">Kanyakumari</div>
-  <div class="absolute inset-0 bg-opacity-0 transition-all duration-500 group-hover:bg-opacity-50 flex items-center justify-center z-100">
+  
+  
+  <div class="absolute top-0 left-0 w-full  bg-opacity-50 text-white p-4 text-lg font-bold z-30">
+    Kanyakumari
+  </div>
+
+ 
+  <div class="absolute inset-0 bg-black bg-opacity-0 transition-all duration-500 group-hover:bg-opacity-50 flex items-center justify-center z-20">
     <ul class="text-white text-lg text-left opacity-0 transition-opacity duration-500 group-hover:opacity-100 list-disc list-inside hidden md:block">
       <li>Vivekananda Rock Memorial</li>
       <li>Thiruvalluvar Statue</li>
       <li>Kanyakumari Beach</li>
       <li>Sunrise & Sunset View</li>
       <li>Bhagavathi Amman Temple</li>
-      <li>Thanumalayan Temple </li>
+      <li>Thanumalayan Temple</li>
       <li>Padmanabhapuram Palace</li>
     </ul>
   </div>
 </div>
+
 
 
     </div>
@@ -459,11 +487,11 @@
 
 
 
-<div class="flex justify-center mt-6 gap-4 md:hidden overflow-x-hidden">
-  <button id="leftArrow" class="p-3  rounded-full shadow-lg hover:bg-gray-400">
+<div class="flex justify-center mt-6 gap-4  overflow-x-hidden">
+  <button id="leftArrow" class="p-3  rounded-full  hover:bg-gray-400">
     <i class="fas fa-chevron-left text-xl text-[#00adef]"></i> 
   </button>
-  <button id="rightArrow" class="p-3  rounded-full shadow-lg hover:bg-gray-400">
+  <button id="rightArrow" class="p-3  rounded-full  hover:bg-gray-400">
     <i class="fas fa-chevron-right text-xl text-[#00adef]"></i>
   </button>
 </div>
@@ -743,7 +771,7 @@
   <div class="w-full sm:w-1/2 lg:w-1/4 h-full p-6 text-center flex flex-col items-center">
     <h3 class="text-3xl sm:text-4xl font-bold mb-4 text-white">Quick Links</h3>
     <ul class="text-base sm:text-lg text-white space-y-2">
-      <li><a href="#" class="hover:text-[#00adef]">Home</a></li>
+      <li><a href="index.html" class="hover:text-[#00adef]">Home</a></li>
       <li><a href="#services" class="hover:text-[#00adef]">Services</a></li>
       <li><a href="packages.html" class="hover:text-[#00adef]">Packages</a></li>
       <li><a href="about.html" class="hover:text-[#00adef]">About</a></li>
@@ -778,8 +806,12 @@
 
 <!-- Footer Section -->
 <div class="w-full bg-black text-white py-4 flex flex-col justify-center items-center px-6">
-  <p class="text-base sm:text-lg">© Ecotour & Travels, All Rights Reserved.</p>
-  <p class="text-base sm:text-lg mt-2">Designed by N-me</p>
+  <p class="text-base sm:text-lg">© Eco tours & Travels, All Rights Reserved.</p>
+  <p class="text-base sm:text-lg mt-2">
+    Designed by 
+    <a href="https://nme360.com/" target="_blank" class="text-[#00adef] hover:underline">N-me 360</a>
+</p>
+
 </div>
     
     
@@ -794,7 +826,7 @@
 
    
 
-    <script src="./js/index.js"></script>
+   
 
 
     <script>
@@ -812,7 +844,7 @@
       });
       
     </script>
-
+ <script src="./js/index.js"></script>
 </body>
   
 
